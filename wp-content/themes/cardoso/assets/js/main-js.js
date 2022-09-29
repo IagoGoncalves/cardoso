@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
     // Menu
         jQuery(window).scroll(function () {
-            if (jQuery(this).scrollTop() > 700) {
+            if (jQuery(this).scrollTop() > 50) {
                 $("#menu-desktop2").addClass("menu-diferente");
             } else {
                 $("#menu-desktop2").removeClass("menu-diferente");
@@ -32,7 +32,30 @@ jQuery(document).ready(function($) {
                 }
             });
         });
+    // Ativar menu fixo
+        var veri = 1;
+        var trigger = document.getElementById('menu-trigger1').addEventListener("click",function(){
+            var menu = document.getElementById('menu-hidde1');
+            if (veri == 1) {
+                menu.style.display = "block";
+                veri = 0;
+            }else{
+                menu.style.display = "none";
+                veri = 1;
+            }
+        })    
 
+        var veri = 1;
+        var trigger = document.getElementById('menu-trigger2').addEventListener("click",function(){
+            var menu = document.getElementById('menu-hidde2');
+            if (veri == 1) {
+                menu.style.display = "block";
+                veri = 0;
+            }else{
+                menu.style.display = "none";
+                veri = 1;
+            }
+        })
     /*efeito cor menu*/
         var links = $("#menu2 a");
         jQuery(window).scroll(function (){
@@ -51,6 +74,27 @@ jQuery(document).ready(function($) {
                 }
             });
         });
+    
+    // Banner da pagina home
+		var swiper = new Swiper('.banner-home', {
+			speed: 2000,
+			parallax: true,
+			loop: true,
+			spaceBetween: 30,
+			effect: 'fade',
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			autoplay: {
+				delay: 5000,
+			},    
+	    });
 
     /* Ajax functions */
         $(document).on('click','.blog', function(){

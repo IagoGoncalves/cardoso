@@ -17,26 +17,7 @@ function type_post_porsonalizados() {
             'show_in_nav_menus'   => true,
             'show_in_rest' => true
          )
-      );
-   
-   //Banner
-      $banner = new Odin_Post_Type(
-         'Banner',
-         'banner'
-      );
-      $banner->set_labels(
-         array( 'menu_name' => __( 'Banner', 'odin' ))
-      );
-      $banner->set_arguments(
-         array(
-            'public' => true,
-            'supports' => array('title','thumbnail','author','revisions' , 'editor'),
-            'has_archive' => true,
-            'menu_icon' => 'dashicons-format-gallery',
-            'show_in_rest' => true
-         )
-      );
-  
+      );  
 }
 
 function change_post_label() {

@@ -59,7 +59,7 @@
 		<div id="menu-desktop" class="menu-desktop"> <!-- Menu Principal--> 
 			<div class="container align">
 				<div class="logo">
-					<a class="logo" href="<?php echo esc_url( home_url( 'home' ) ); ?>" alt="Cardoso - Materiais para construção" title="Cardoso - Materiais para construção"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Cardoso - Materiais para construção"/></a>
+					<a href="<?php echo esc_url( home_url( 'home' ) ); ?>" alt="Cardoso - Materiais para construção" title="Cardoso - Materiais para construção"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Cardoso - Materiais para construção"/></a>
 				</div>
 				<nav id="menu" class="align">	
 					<ul class="lista-menu">			
@@ -69,7 +69,26 @@
 						<li><a href="#frota" class="scroll" title="Frota">Frota</a></li>
 						<li><a href="#contato" class="scroll" title="Contato">Contato</a></li>
 					</ul>
-					<a class="botao-padrao botao-whats align" href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp ?>&text=Olá, vim pelo site." alt="<?php echo $whatsapp ?>" title="<?php echo $whatsapp ?>1" target="_blank">
+					<a class="botao-whats align" href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp ?>&text=Olá, vim pelo site." alt="<?php echo $whatsapp ?>" title="<?php echo $whatsapp ?>1" target="_blank">
+						<div class="align"><span class="sunset-icon sunset-loading botao-carregar">Whatsapp</span></div>
+					</a>
+				</nav>
+			</div>
+		</div>
+		<div id="menu-desktop2" class="menu-desktop2"> <!-- Menu Fixo--> 
+			<div class="container align">
+				<div class="logo">
+					<a href="<?php echo esc_url( home_url( 'home' ) ); ?>" alt="Cardoso - Materiais para construção" title="Cardoso - Materiais para construção"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Cardoso - Materiais para construção"/></a>
+				</div>
+				<nav id="menu" class="align">	
+					<ul class="lista-menu">			
+						<li><a href="#home" class="scroll" title="Inicio">Início</a></li>
+						<li><a href="#sobre" class="scroll" title="Sobre a empresa">Sobre a empresa</a></li>
+						<li><a href="#produtos" class="scroll" title="Produtos">Produtos</a></li>					
+						<li><a href="#frota" class="scroll" title="Frota">Frota</a></li>
+						<li><a href="#contato" class="scroll" title="Contato">Contato</a></li>
+					</ul>
+					<a class="botao-whats align" href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp ?>&text=Olá, vim pelo site." alt="<?php echo $whatsapp ?>" title="<?php echo $whatsapp ?>1" target="_blank">
 						<div class="align"><span class="sunset-icon sunset-loading botao-carregar">Whatsapp</span></div>
 					</a>
 				</nav>

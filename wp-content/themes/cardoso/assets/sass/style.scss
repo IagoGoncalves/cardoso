@@ -31,8 +31,7 @@ body{
         padding: 0;
 }
 main{
-        background-color: #b0c800;
-        padding-top: 159px;
+        //padding-top: 159px;
 }
 @media (min-width: 1500px){
         .container {
@@ -47,7 +46,7 @@ main{
         justify-content: center;
         align-items: center;
 }
-.botao-padrao{
+.botao-whats{
         display: flex;
         overflow: hidden;
         position: relative;
@@ -186,15 +185,19 @@ header{
                        display: none;
                 }
         }
-        .menu-desktop{ // menu fixo
-                background: linear-gradient(180deg, #13334C -43.75%, rgba(19, 51, 76, 0) 185%, #13334C 185%);                                            
-                position: fixed;
+        .menu-desktop{
+                background: transparent;                
+                position: absolute;
+                top: 0;
                 transition: all .4s;               
                 width: 100%;
                 z-index: 9999; 
                 .container{  
+                        @media screen and (max-width: 992px){
+                                display: none;
+                        }
                         .logo{
-                        padding: 32px 0;          
+                                padding: 32px 0;          
                         }     
                         @media screen and (max-width: 850px) and (min-width: 220px) {
                                 position:relative;
@@ -206,7 +209,40 @@ header{
                                 text-align: center;
                                 transition: all .4s;
                                 justify-content: flex-end;
-                                .botao-padrao{
+                                .botao-whats{
+                                        margin-left: 95px;
+                                }
+                        }
+                }
+        }   
+        .menu-desktop2{ // menu fixo
+                background: linear-gradient(180deg, #13334C -43.75%, rgba(19, 51, 76, 0) 185%, #13334C 185%);                                         
+                position: fixed;
+                transition: all .4s;               
+                width: 100%;
+                z-index: 9999; 
+                top: -300px;
+                .container{  
+                        @media screen and (max-width: 992px){
+                                display: none;
+                        }
+                        .logo{
+                                padding: 15px 0;         
+                                img{
+                                        width: 165px;
+                                } 
+                        }     
+                        @media screen and (max-width: 850px) and (min-width: 220px) {
+                                position:relative;
+                                display: none;
+                        }                
+                        nav{
+                                background: transparent;
+                                width: 100%;
+                                text-align: center;
+                                transition: all .4s;
+                                justify-content: flex-end;
+                                .botao-whats{
                                         margin-left: 95px;
                                 }
                         }
@@ -656,4 +692,134 @@ footer{
                         }
                 }
         }
+}
+.home{
+        .banner{
+                height: 85vh;
+                position: relative;
+                @media screen and (max-width: 770px){
+                        height: auto;
+                }
+                .swiper-container {
+                        width: 100%;
+                        height: 100%;
+                        background: #000;
+                        position: relative;
+                        overflow: unset;
+                        .swiper-wrapper{
+                                .swiper-slide {
+                                        font-size: 18px;
+                                        color: #fff;
+                                        -webkit-box-sizing: border-box;
+                                        box-sizing: border-box;
+                                        padding: 0px; 
+                                        .padrao-banner{
+                                                .foto-banner{
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        overflow: hidden;
+                                                        position:relative;
+                                                        @media screen and (max-width: 770px) and (min-width: 220px) {
+                                                                height: 60vh;
+                                                        }                                
+                                                        .foto{
+                                                                background-repeat: no-repeat;
+                                                                background-position: center;
+                                                                background-size: cover;
+                                                                position: relative;
+                                                                width: 100%;
+                                                                height: 100%;       
+                                                        }
+                                                }
+                                                .descricoes{
+                                                        position: absolute;
+                                                        z-index: 999;
+                                                        top: 50%;
+                                                        left: 7%;
+                                                        transform: translateY(-50%); 
+                                                        h2{
+                                                                margin: 0;
+                                                                font-size: 60px;
+                                                                color: #fff;
+                                                                font-weight: 700;
+                                                                padding: 0;
+                                                        } 
+                                                        @media screen and (max-width: 600px){
+                                                                width: 80%;
+                                                                max-width: 100%;
+                                                                h2{
+                                                                        width: 50%; 
+                                                                        padding: 0;
+                                                                        font-size: 32px;
+                                                                }
+                                                        }                        
+                                                }      
+                                        }
+                                        .banner1{
+                                                .descricoes{
+                                                        width: 40%;
+                                                }
+                                        }
+                                        .banner2{
+                                                .descricoes{
+                                                        left: 50%;
+                                                        transform: translate(-50%, -20%);
+                                                        h2{
+                                                                text-align: center;
+                                                                b{
+                                                                        color: $laranja;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                        .banner3{
+                                                .descricoes{
+                                                        left: 50%;
+                                                        transform: translate(-50%, -20%);
+                                                        h2{
+                                                                text-align: center;
+                                                                
+                                                        }
+                                                }
+                                        }
+                                        
+                                }
+                        }
+                        .swiper-button-white{
+                                position: relative;
+                                width: 60px;
+                                height: 16px;
+                                margin-top: -25px;
+                        }
+                        .swiper-pagination{
+                                position: relative;
+                                bottom: 10px;
+                                left: inherit;
+                                width: initial;
+                                @media screen and (max-width: 457px){
+                                        right: 50%;
+                                        transform: translate(50%);
+                                } 
+                                .swiper-pagination-bullet {
+                                        width: 50px;
+                                        height: 16px;
+                                        text-align: center;
+                                        line-height: 20px;
+                                        opacity: 1;
+                                        background: rgba(255, 255, 255, 0.2);
+                                        border-radius: 0;       
+                                        margin: 0 12px;             
+                                        &:focus {
+                                                outline: -webkit-focus-ring-color auto 0px;
+                                        }
+                                }
+                                .swiper-pagination-bullet-active {
+                                        color: #fff;
+                                        background: #fff;
+                                        border-bottom: 2px solid #fff;
+                                }  
+                        }
+                }
+        } 
+        
 }

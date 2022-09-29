@@ -341,7 +341,7 @@ $template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
 function cutom_login_logo() {
 	echo "<style type=\"text/css\">
 		body.login div#login h1 a {
-			background-image: url(". get_template_directory_uri() ."/assets/images/adm.png) !important;
+			background-image: url(". get_template_directory_uri() ."/assets/images/logo.png) !important;
 			background-size: cover !important;
 			height: 150px !important;
 			width: 320px !important;
