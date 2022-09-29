@@ -58,6 +58,38 @@ get_header();
 				</div>
 			</div>			
 		</section>
+		<section class="flag">
+			<div class="container align">
+				<?php
+					$textIcn1 =  get_post_meta( $post->ID,'text-icn-1', true );
+					$textIcn2 =  get_post_meta( $post->ID,'text-icn-2', true );
+				?>
+				<div class="box1">
+					<div class="card align">
+						<?php 
+							$galeria = get_post_meta( $post->ID,'icone1', true );					
+							$galeria = explode(",", $galeria);
+							foreach ( $galeria as $foto ) { ?>					
+								<img src="<?php echo odin_get_image_url( $foto, 62, 60, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+							<?php }
+						?>
+						<h2><?php echo $textIcn1?></h2>
+					</div>
+				</div>
+				<div class="box2">
+					<div class="card align">
+						<?php 
+							$galeria = get_post_meta( $post->ID,'icone2', true );					
+							$galeria = explode(",", $galeria);
+							foreach ( $galeria as $foto ) { ?>					
+								<img src="<?php echo odin_get_image_url( $foto, 62, 60, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+							<?php }
+						?>
+						<h2><?php echo $textIcn2?></h2>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main><!-- #main -->
 <?php
 get_footer();

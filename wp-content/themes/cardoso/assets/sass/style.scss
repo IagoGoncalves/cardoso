@@ -821,5 +821,39 @@ footer{
                         }
                 }
         } 
-        
+        .flag{
+                @extend .col-md-12;
+                padding: 0px;
+                margin-top: 64px;
+                .container{
+                        h2{
+                                margin: 30px 0 0 0;
+                                color: #fff;
+                                font-weight: 700;
+                                text-align: center;
+                        }
+                        .box1{
+                                background: linear-gradient(90deg, #13334C 3.39%, #005792 100%);
+                                padding: 120px 100px 100px 100px;
+                                margin-top: -70px;
+                                margin-left: 120px;
+                                transform: skewY(5deg);
+                                .card{
+                                        flex-direction: column;
+                                        transform: skewY(-5deg);
+                                }
+                        }
+                        .box2{
+                                background: linear-gradient(285.57deg, #005792 3.11%, #13334C 100%);
+                                padding: 100px;
+                                margin-top: -70px;
+                                margin-right: 120px;
+                                transform: skewY(-5deg);
+                                .card{
+                                        flex-direction: column;
+                                        transform: skewY(5deg);
+                                }
+                        }
+                }
+        }
 }
