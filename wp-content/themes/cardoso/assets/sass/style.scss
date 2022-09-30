@@ -917,14 +917,13 @@ p{
                                                 clear: both;
                                         }
                                         .inner{
-                                                width: 40%;
+                                                width: 42%; 
                                                 float: left;
-                                                margin: 5px 0 0 0;
                                                 border-radius: 6px;
                                                 .date{
                                                         display: block;
                                                         width: 60px;
-                                                        height: 50px;
+                                                        height: 100%;
                                                         padding: 5px 0;
                                                         position: absolute;
                                                         top: 0px;
@@ -937,10 +936,21 @@ p{
                                                         color: $azul-escuro;
                                                         display: block;
                                                         text-align: center;
+                                                        &:after{
+                                                                content: '';
+                                                                display: block;
+                                                                position: relative;
+                                                                left: 85%;
+                                                                transform: translateX(-50%);
+                                                                top: 0;
+                                                                width: 10px;
+                                                                height: 75%;
+                                                                background: $laranja;
+                                                        }
                                                 }
                                                 p{
                                                         background-color: $azul-escuro;
-                                                        padding: 15px;
+                                                        padding: 35px;
                                                         margin: 0;
                                                         color: #fff;
                                                         font-size: 20px;
@@ -950,10 +960,10 @@ p{
                                                                 content: '';
                                                                 position: absolute;
                                                                 background-color: $azul-escuro;
-                                                                top: 20px;
+                                                                top: 10px;
                                                                 right: -5px;
-                                                                width: 10px; 
-                                                                height: 10px;
+                                                                width: 40px; 
+                                                                height: 40px;
                                                                 -webkit-transform: rotate(-45deg);
                                                         }
                                                 }
