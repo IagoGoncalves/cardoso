@@ -18,6 +18,23 @@ function type_post_porsonalizados() {
             'show_in_rest' => true
          )
       );  
+   //Timeline
+      $timeline = new Odin_Post_Type(
+         'Linha do tempo',
+         'timeline'
+      );
+      $timeline->set_labels(
+         array( 'menu_name' => __( 'Linha do tempo', 'odin' ))
+      );
+      $timeline->set_arguments(
+         array(
+            'public' => true,
+            'supports' => array('title','author','revisions' , 'editor'),
+            'has_archive' => true,
+            'menu_icon' => 'dashicons-editor-ol',
+            'show_in_rest' => true
+         )
+      );
 }
 
 function change_post_label() {

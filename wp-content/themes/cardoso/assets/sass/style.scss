@@ -948,14 +948,16 @@ p{
                                                                 background: $laranja;
                                                         }
                                                 }
-                                                p{
+                                                .texto{
+                                                        margin: 0;
+                                                        position: relative;
                                                         background-color: $azul-escuro;
                                                         padding: 35px;
-                                                        margin: 0;
-                                                        color: #fff;
-                                                        font-size: 20px;
-                                                        position: relative;
-                                                        font-weight: 400;
+                                                        p{
+                                                                color: #fff;
+                                                                font-size: 20px;
+                                                                font-weight: 400;
+                                                        }
                                                         &:after{
                                                                 content: '';
                                                                 position: absolute;
@@ -971,7 +973,7 @@ p{
                                         &:nth-child(2n+2){
                                                 .inner{
                                                         float: right;
-                                                        p{
+                                                        .texto{
                                                                 &:after{
                                                                         left: -5px;
                                                                 }

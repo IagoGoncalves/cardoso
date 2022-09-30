@@ -109,111 +109,31 @@ get_header();
 		<section class="linha-tempo">
 			<div class="container">
 				<div id="timeline">
-					<article>
+					<?php 
+						$args = array('post_type' => 'timeline','posts_per_page' => -1, 'orderby' => 'title', 'order' => 'asc');
+						$var = new WP_Query($args);    
+						if($var->have_posts()):
+							while($var->have_posts()):
+								$var->the_post();?>  
+									<article>
+										<div class="inner">
+											<span class="date"><?php the_title()?></span>
+											<div class="texto"><?php the_content()?></div>
+										</div>
+									</article>
+								<?php
+							endwhile;
+						endif;
+					wp_reset_postdata(); ?>
+					<!-- <article>
 						<div class="inner">
 							<span class="date">1974</span>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
 						</div>
-					</article>
-					<article>
-						<div class="inner">
-						<span class="date">1974</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
-						</div>
-					</article>
-					<article>
-						<div class="inner">
-						<span class="date">1974</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
-						</div>
-					</article>
-					<article>
-						<div class="inner">
-						<span class="date">1974</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
-						</div>
-					</article>
-					<article>
-						<div class="inner">
-						<span class="date">1974</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
-						</div>
-					</article>
+					</article>-->
 				</div>
 			</div>
 		</section>
-		
-				<!-- <section class="timeline">
-			
-			<?php
-				$ano1 =  get_post_meta( $post->ID,'ano1', true );
-				$textoAno1 =  get_post_meta( $post->ID,'texto-ano1', true );
-				$ano2 =  get_post_meta( $post->ID,'ano2', true );
-				$textoAno2 =  get_post_meta( $post->ID,'texto-ano2', true );
-				$ano3 =  get_post_meta( $post->ID,'ano3', true );
-				$textoAno3 =  get_post_meta( $post->ID,'texto-ano3', true );
-				$ano4 =  get_post_meta( $post->ID,'ano4', true );
-				$textoAno4 =  get_post_meta( $post->ID,'texto-ano4', true );
-				$ano5 =  get_post_meta( $post->ID,'ano5', true );
-				$textoAno5 =  get_post_meta( $post->ID,'texto-ano5', true );
-				$ano6 =  get_post_meta( $post->ID,'ano6', true );
-				$textoAno6 =  get_post_meta( $post->ID,'texto-ano6', true );
-				$ano7 =  get_post_meta( $post->ID,'ano7', true );
-				$textoAno7 =  get_post_meta( $post->ID,'texto-ano7', true );
-			
-			?>
-			<div class="container">
-				<article class="card card1 cleft">
-					<div class="box left">
-						<p><?php echo $textoAno1?></p>
-					</div>
-					<h2><?php echo $ano1?></h2>
-
-				</article>
-				<article class="card card2 cright">
-				<h2><?php echo $ano2?></h2>
-
-					<div class="box right">
-						<p><?php echo $textoAno2?></p>
-					</div>
-				</article>
-				<article class="card card3 cleft">
-					<div class="box left">
-						<p><?php echo $textoAno3?></p>
-					</div>
-				<h2><?php echo $ano3?></h2>
-
-				</article>
-				<article class="card card4 cright">
-				<h2><?php echo $ano4?></h2>
-
-					<div class="box right">
-						<p><?php echo $textoAno4?></p>
-					</div>
-				</article>
-				<article class="card card cleft5">
-					<div class="box left">
-						<p><?php echo $textoAno5?></p>
-					</div>
-					<h2><?php echo $ano5?></h2>
-
-				</article>
-				<article class="card card6 cright">
-				<h2><?php echo $ano6?></h2>
-
-					<div class="box right">
-						<p><?php echo $textoAno6?></p>
-					</div>
-				</article>
-				<article class="card card7 cleft">
-					<div class="box left">
-						<p><?php echo $textoAno7?></p>
-					</div>
-					<h2><?php echo $ano7?></h2>
-
-				</article>
-			</div>
-		</section> -->
-	</main><!-- #main -->
+	</main>
 <?php
 get_footer();
