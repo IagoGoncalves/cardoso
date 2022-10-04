@@ -231,6 +231,53 @@ get_header();
 				</article>
 			</div>
 		</section>
+		<section class="frota">
+			<div class="swiper-container swiper-frota">
+				<div class="swiper-wrapper">
+					<?php 
+						$galeria = get_post_meta( $post->ID,'imagens-frota', true );					
+						$galeria = explode(",", $galeria);
+						foreach ( $galeria as $foto ) { ?>		
+							<div class="swiper-slide">
+								<img src="<?php echo odin_get_image_url( $foto, 1060, 600, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+							</div>
+						<?php }
+					?>		
+				</div>
+				<div class="navigation">
+					<div class="swiper-button-prev swiper-button-white"></div>
+					<div class="swiper-button-next swiper-button-white"></div>	
+				</div>
+			</div>
+			<article class="descritivo">
+				<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/frota-title.png"/>
+				<p><?php echo get_post_meta( $post->ID,'texto-frota', true );?></p>
+			</article>
+		</section>
+		<section class="clientes">
+			<div class="container">
+				<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/clientes.png"/>
+				<div class="swiper-container clientes-destaque">
+                    <div class="swiper-wrapper">
+                        <?php 
+                            $args = array('post_type' => 'clientes','posts_per_page' => -1);
+                            $var = new WP_Query($args);
+                            if($var->have_posts()):
+                                while($var->have_posts()):
+                                    $var->the_post();?>                                   
+                                        <div class="swiper-slide">
+                                            <div class="box">
+                                                <?php echo odin_thumbnail(200, 100, get_the_title(), false, false);?>
+                                            </div>
+                                        </div>
+                                    <?php
+                                endwhile;
+                            endif;
+                        wp_reset_postdata(); ?>
+                    </div> 
+                </div>
+			</div>
+		</section>
 	</main>
 <?php
 get_footer();

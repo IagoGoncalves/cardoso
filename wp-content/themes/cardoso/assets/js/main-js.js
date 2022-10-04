@@ -108,6 +108,51 @@ jQuery(document).ready(function($) {
 			},    
 	    });
 
+    // Swiper frota
+		var swiper = new Swiper('.swiper-frota', {
+			speed: 2000,
+			parallax: true,
+			loop: true,
+			spaceBetween: 30,
+			effect: 'fade',
+            navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			autoplay: {
+				delay: 3000,
+			},    
+	    });
+
+    // Clientes
+        var swiper = new Swiper('.clientes-destaque', {
+            slidesPerView: 5,
+            spaceBetween: 30,		
+            speed: 2000,
+            loop: true,		
+            breakpoints: {
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                425: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                }
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+
     /* Ajax functions */
         $(document).on('click','.blog', function(){
             

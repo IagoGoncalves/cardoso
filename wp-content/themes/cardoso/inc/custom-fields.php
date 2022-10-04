@@ -280,12 +280,6 @@ function custom_metabox() {
       ),
     // Frota
       array(
-        'id'          => 'titulo-frota', // Obrigatório
-        'label'       => __( 'Serviço 1', 'odin' ), // Obrigatório
-        'type'        => 'text', // Obrigatório
-        'default'     => 'frota', // Opcional
-      ),
-      array(
         'id'          => 'texto-frota', // Obrigatório
         'label'       => __( 'Texto Frota', 'odin' ), // Obrigatório
         'type'        => 'textarea', // Obrigatório
@@ -293,6 +287,13 @@ function custom_metabox() {
       array(
         'id'          => 'imagens-frota', // Obrigatório
         'label'       => __( 'Imagens Frota', 'odin' ), // Obrigatório
+        'type'        => 'image_plupload', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+      ),
+    // Cliente
+      array(
+        'id'          => 'clientes', // Obrigatório
+        'label'       => __( 'Imagens Clientes', 'odin' ), // Obrigatório
         'type'        => 'image_plupload', // Obrigatório
         'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
       ),
