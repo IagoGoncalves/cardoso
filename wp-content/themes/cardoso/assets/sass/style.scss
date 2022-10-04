@@ -30,11 +30,15 @@ body{
         width: 100%;
         padding: 0;
 }
-@media (min-width: 1500px){
-        .container {
+.container{
+        @media (min-width: 1500px){
                 width: 1700px;
         }
+        @media screen and (max-width: 1500px){
+                width: 1400px;
+        }
 }
+
 .desabilitado{
         display: none !important;
 }
@@ -220,6 +224,9 @@ header{
                 z-index: 9999; 
                 top: -300px;
                 .container{  
+                        // @media screen and (max-width: 1880px){
+                        //         margin: 0 2%;
+                        // }
                         @media screen and (max-width: 992px){
                                 display: none;
                         }
@@ -699,15 +706,11 @@ p{
         .banner{
                 height: 85vh;
                 position: relative;
-                @media screen and (max-width: 770px){
-                        height: auto;
-                }
                 .swiper-container {
                         width: 100%;
                         height: 100%;
                         background: #000;
                         position: relative;
-                        overflow: unset;
                         .swiper-wrapper{
                                 .swiper-slide {
                                         font-size: 18px;
@@ -730,7 +733,10 @@ p{
                                                                 background-size: cover;
                                                                 position: relative;
                                                                 width: 100%;
-                                                                height: 100%;       
+                                                                height: 100%;   
+                                                                img{
+                                                                        max-width: 100%;
+                                                                }    
                                                         }
                                                 }
                                                 .descricoes{
@@ -791,11 +797,11 @@ p{
                                 position: relative;
                                 width: 60px;
                                 height: 16px;
-                                margin-top: -25px;
+                                margin-top: -60px;
                         }
                         .swiper-pagination{
                                 position: relative;
-                                bottom: 10px;
+                                bottom: 28px;
                                 left: inherit;
                                 width: initial;
                                 @media screen and (max-width: 457px){
@@ -822,6 +828,28 @@ p{
                                 }  
                         }
                 }
+                @media screen and (max-width: 1880px){
+                        .swiper-container{
+                                overflow: hidden;
+                        }
+                }
+                @media screen and (max-width: 1500px){
+                        height: auto;
+                        .swiper-container{
+                                .navegation{
+                                        position: absolute;
+                                        left: 50%;
+                                        z-index: 99;
+                                        transform: translateX(-50%);
+                                        .swiper-pagination{
+                                                left: 0;
+                                        }
+                                }
+                        }
+                }
+                @media screen and (max-width: 770px){
+                        height: auto;
+                }
         } 
         .flag{
                 @extend .col-md-12;
@@ -837,7 +865,7 @@ p{
                         .box1{
                                 background: linear-gradient(90deg, #13334C 3.39%, #005792 100%);
                                 padding: 120px 100px 100px 100px;
-                                margin-top: -70px;
+                                margin-top: -125px;
                                 margin-left: 120px;
                                 transform: skewY(5deg);
                                 .card{
@@ -848,7 +876,7 @@ p{
                         .box2{
                                 background: linear-gradient(285.57deg, #005792 3.11%, #13334C 100%);
                                 padding: 100px;
-                                margin-top: -45px;
+                                margin-top: -100px;
                                 margin-right: 120px;
                                 transform: skewY(-5deg);
                                 .card{
@@ -1036,51 +1064,66 @@ p{
                         }
                         
                 }
-                .blocos{
-                        display: none;
-                        @extend .col-md-12;
-                        padding: 0px;
-                        background-color: $azul-escuro;
-                        position: absolute;
-                        top: 0;
-                        .fechar-modal{
-                                position: absolute;
-                                right: 0;
-                                padding: 25px;
-                                a{
-                                        color: #fff;
-                                        font-size: 24px;
-                                        font-weight: 700;
-                                        text-decoration: none;
-                                }
-                        }
+                @media screen and (max-width: 1500px){
                         .container{
-                                padding: 0;
-                                .icones{
-                                        @extend .col-md-3;
-                                        padding: 0px;
-                                        padding: 18% 2%;
-                                        background-color: $laranja;
-                                        h4{
-                                                width: 50%;
-                                                font-weight: 700;
-                                                font-size: 24px;
-                                                color: #fff;
-                                                margin-top: 30px;
+                                .card{
+                                        .swiper-slide{
+                                                width: 25%;
                                         }
                                 }
-                                p{
-                                        @extend .col-md-offset-1, .col-md-3;
-                                        padding: 0px;
-                                        color: #fff;
+                        }
+                        .blocos{
+                                .container{
+                                        .icones{
+                                                padding: 21% 2%;
+                                        }
                                 }
-                                .swiper-container{
-                                        @extend .col-md-offset-1, .col-md-4;
-                                        padding: 0px;
-                                        .swiper-wrapper{
-                                                .swiper-slide{
-                                                        width: auto !important;
-                                                }
+                        }
+                }
+        }
+        .openProdutos{
+                display: none;
+                @extend .col-md-12;
+                padding: 0px;
+                margin: 120px 0;
+                background-color: $azul-escuro;
+                .fechar-modal{
+                        position: absolute;
+                        right: 0;
+                        padding: 25px;
+                        a{
+                                color: #fff;
+                                font-size: 24px;
+                                font-weight: 700;
+                                text-decoration: none;
+                        }
+                }
+                .container{
+                        padding: 0;
+                        .icones{
+                                @extend .col-md-3;
+                                padding: 0px;
+                                padding: 18% 2%;
+                                background-color: $laranja;
+                                h4{
+                                        width: 50%;
+                                        font-weight: 700;
+                                        font-size: 24px;
+                                        color: #fff;
+                                        margin-top: 30px;
+                                }
+                        }
+                        p{
+                                @extend .col-md-offset-1, .col-md-3;
+                                padding: 0px;
+                                color: #fff;
+                        }
+                        .swiper-container{
+                                @extend .col-md-offset-1, .col-md-4;
+                                padding: 0px;
+                                .swiper-wrapper{
+                                        .swiper-slide{
+                                                width: auto !important;
                                         }
                                 }
                         }
@@ -1115,6 +1158,23 @@ p{
                                                                         width: 100%;
                                                                         max-width: 100%;
                                                                 }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+                @media screen and (max-width: 1500px){
+                        .container{
+                                .card{
+                                        .box{
+                                                .descritivo{
+                                                        height: 462px;
+                                                        p{
+                                                                font-size: 18px;
+                                                        }
+                                                        img{
+                                                                max-width: 40%;
                                                         }
                                                 }
                                         }

@@ -128,7 +128,7 @@ get_header();
 				</div>
 			</div>
 		</section>
-		<section class="produtos">
+		<section class="produtos" id="bloco0">
 			<div class="container">
 				<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/produtos.png"/>
 				<p class="subtitulo"><?php echo get_post_meta( $post->ID,'text-produto', true );?></p>
@@ -152,40 +152,142 @@ get_header();
 					?>
 				</article>
 			</div>
-			<article class="blocos" id="bloco1">
-				<div class="fechar-modal"><a href="javascript:void(0);" id="fechar-modal" onclick='fecharModal()'>X</a></div>
-				<div class="container align">
-					<?php
-						$args = array('post_type' => 'produto','posts_per_page' => 1);
-							$var = new WP_Query($args);
-							if($var->have_posts()):
-								while($var->have_posts()):
-									$var->the_post();?>																	
-										<div class="icones">
-											<?php echo odin_thumbnail(120, 120, true, true);?>
-											<h4><?php the_title()?></h4>
+		</section>
+		<section class="openProdutos" id="bloco1">
+			<div class="fechar-modal"><a href="javascript:void(0);" id="fechar-modal" onclick='fecharModal()'>X</a></div>
+			<div class="container align">
+				<?php
+					$args = array('post_type' => 'produto','posts_per_page' => 1);
+						$var = new WP_Query($args);
+						if($var->have_posts()):
+							while($var->have_posts()):
+								$var->the_post();?>																	
+									<div class="icones">
+										<?php echo odin_thumbnail(120, 120, true, true);?>
+										<h4><?php the_title()?></h4>
+									</div>
+									<?php the_content()?>
+									<div class="swiper-container swiper-produto">
+										<div class="swiper-wrapper">
+											<?php 
+												$galeria = get_post_meta( $post->ID,'imagens-produto', true );					
+												$galeria = explode(",", $galeria);
+												foreach ( $galeria as $foto ) { ?>		
+													<div class="swiper-slide">
+														<img src="<?php echo odin_get_image_url( $foto, 600, 685, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+													</div>
+												<?php }
+											?>		
 										</div>
-										<?php the_content()?>
-										<div class="swiper-container swiper-produto">
-											<div class="swiper-wrapper">
-												<?php 
-													$galeria = get_post_meta( $post->ID,'imagens-produto', true );					
-													$galeria = explode(",", $galeria);
-													foreach ( $galeria as $foto ) { ?>		
-														<div class="swiper-slide">
-															<img src="<?php echo odin_get_image_url( $foto, 600, 685, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
-														</div>
-													<?php }
-												?>		
-											</div>
+									</div>
+								<?php
+							endwhile;
+						endif;
+					wp_reset_postdata(); 
+				?>
+			</div>
+		</section>
+		<section class="openProdutos" id="bloco2">
+			<div class="fechar-modal"><a href="javascript:void(0);" id="fechar-modal" onclick='fecharModal()'>X</a></div>
+			<div class="container align">
+				<?php
+					$args = array('post_type' => 'produto','posts_per_page' => 1, 'offset'=> 1);
+						$var = new WP_Query($args);
+						if($var->have_posts()):
+							while($var->have_posts()):
+								$var->the_post();?>																	
+									<div class="icones">
+										<?php echo odin_thumbnail(120, 120, true, true);?>
+										<h4><?php the_title()?></h4>
+									</div>
+									<?php the_content()?>
+									<div class="swiper-container swiper-produto">
+										<div class="swiper-wrapper">
+											<?php 
+												$galeria = get_post_meta( $post->ID,'imagens-produto', true );					
+												$galeria = explode(",", $galeria);
+												foreach ( $galeria as $foto ) { ?>		
+													<div class="swiper-slide">
+														<img src="<?php echo odin_get_image_url( $foto, 600, 685, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+													</div>
+												<?php }
+											?>		
 										</div>
-									<?php
-								endwhile;
-							endif;
-						wp_reset_postdata(); 
-					?>
-				</div>
-			</article>
+									</div>
+								<?php
+							endwhile;
+						endif;
+					wp_reset_postdata(); 
+				?>
+			</div>
+		</section>
+		<section class="openProdutos" id="bloco3">
+			<div class="fechar-modal"><a href="javascript:void(0);" id="fechar-modal" onclick='fecharModal()'>X</a></div>
+			<div class="container align">
+				<?php
+					$args = array('post_type' => 'produto','posts_per_page' => 1, 'offset'=> 2);
+						$var = new WP_Query($args);
+						if($var->have_posts()):
+							while($var->have_posts()):
+								$var->the_post();?>																	
+									<div class="icones">
+										<?php echo odin_thumbnail(120, 120, true, true);?>
+										<h4><?php the_title()?></h4>
+									</div>
+									<?php the_content()?>
+									<div class="swiper-container swiper-produto">
+										<div class="swiper-wrapper">
+											<?php 
+												$galeria = get_post_meta( $post->ID,'imagens-produto', true );					
+												$galeria = explode(",", $galeria);
+												foreach ( $galeria as $foto ) { ?>		
+													<div class="swiper-slide">
+														<img src="<?php echo odin_get_image_url( $foto, 600, 685, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+													</div>
+												<?php }
+											?>		
+										</div>
+									</div>
+								<?php
+							endwhile;
+						endif;
+					wp_reset_postdata(); 
+				?>
+			</div>
+		</section>
+		<section class="openProdutos" id="bloco4">
+			<div class="fechar-modal"><a href="javascript:void(0);" id="fechar-modal" onclick='fecharModal()'>X</a></div>
+			<div class="container align">
+				<?php
+					$args = array('post_type' => 'produto','posts_per_page' => 1, 'offset'=> 3);
+						$var = new WP_Query($args);
+						if($var->have_posts()):
+							while($var->have_posts()):
+								$var->the_post();?>																	
+									<div class="icones">
+										<?php echo odin_thumbnail(120, 120, true, true);?>
+										<h4><?php the_title()?></h4>
+									</div>
+									<?php the_content()?>
+									<div class="swiper-container swiper-produto">
+										<div class="swiper-wrapper">
+											<?php 
+												$galeria = get_post_meta( $post->ID,'imagens-produto', true );					
+												$galeria = explode(",", $galeria);
+												foreach ( $galeria as $foto ) { ?>		
+													<div class="swiper-slide">
+														<img src="<?php echo odin_get_image_url( $foto, 600, 685, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+													</div>
+												<?php }
+											?>		
+										</div>
+									</div>
+								<?php
+							endwhile;
+						endif;
+					wp_reset_postdata(); 
+				?>
+			</div>
 		</section>
 		<section class="servico">
 			<div class="container">

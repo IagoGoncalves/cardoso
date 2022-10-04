@@ -198,9 +198,26 @@ jQuery(document).ready(function($) {
 });
 
 // Área de produtos
-    function openTela(){
+    function openTela1(){
         document.getElementById('bloco1').style.display = 'block';
+        document.getElementById('bloco0').style.display = 'none';
+    }
+    function openTela2(){
+        document.getElementById('bloco2').style.display = 'block';
+        document.getElementById('bloco0').style.display = 'none';
+    }
+    function openTela3(){
+        document.getElementById('bloco3').style.display = 'block';
+        document.getElementById('bloco0').style.display = 'none';
+    }
+    function openTela4(){
+        document.getElementById('bloco4').style.display = 'block';
+        document.getElementById('bloco0').style.display = 'none';
     }
     function fecharModal(){
         document.getElementById('bloco1').style.display = 'none';
+        document.getElementById('bloco2').style.display = 'none';
+        document.getElementById('bloco3').style.display = 'none';
+        document.getElementById('bloco4').style.display = 'none';
+        document.getElementById('bloco0').style.display = 'block';
     }
