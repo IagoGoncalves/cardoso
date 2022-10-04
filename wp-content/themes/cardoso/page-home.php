@@ -1,5 +1,5 @@
 <?php
-/**
+/**	
  * Template Name: Home
  *
  * The template for displaying pages with sidebar.
@@ -125,13 +125,110 @@ get_header();
 							endwhile;
 						endif;
 					wp_reset_postdata(); ?>
-					<!-- <article>
-						<div class="inner">
-							<span class="date">1974</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
-						</div>
-					</article>-->
 				</div>
+			</div>
+		</section>
+		<section class="produtos">
+			<div class="container">
+				<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/produtos.png"/>
+				<p class="subtitulo"><?php echo get_post_meta( $post->ID,'text-produto', true );?></p>
+				<article class="card">
+					<?php
+						$args = array('post_type' => 'produto','posts_per_page' => 4);
+							$var = new WP_Query($args);
+							if($var->have_posts()):
+								while($var->have_posts()):
+									$var->the_post();?>																	
+										<div class="swiper-slide">
+											<a href="javascript:void(0);" class="box" onclick='openTela()'>
+												<?php echo odin_thumbnail(120, 120, true, true);?>
+												<h4><?php the_title()?></h4>
+											</a>
+										</div>	
+									<?php
+								endwhile;
+							endif;
+						wp_reset_postdata(); 
+					?>
+				</article>
+			</div>
+			<article class="blocos" id="bloco1">
+				<div class="fechar-modal"><a href="javascript:void(0);" id="fechar-modal" onclick='fecharModal()'>X</a></div>
+				<div class="container align">
+					<?php
+						$args = array('post_type' => 'produto','posts_per_page' => 1);
+							$var = new WP_Query($args);
+							if($var->have_posts()):
+								while($var->have_posts()):
+									$var->the_post();?>																	
+										<div class="icones">
+											<?php echo odin_thumbnail(120, 120, true, true);?>
+											<h4><?php the_title()?></h4>
+										</div>
+										<?php the_content()?>
+										<div class="swiper-container swiper-produto">
+											<div class="swiper-wrapper">
+												<?php 
+													$galeria = get_post_meta( $post->ID,'imagens-produto', true );					
+													$galeria = explode(",", $galeria);
+													foreach ( $galeria as $foto ) { ?>		
+														<div class="swiper-slide">
+															<img src="<?php echo odin_get_image_url( $foto, 600, 685, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+														</div>
+													<?php }
+												?>		
+											</div>
+										</div>
+									<?php
+								endwhile;
+							endif;
+						wp_reset_postdata(); 
+					?>
+				</div>
+			</article>
+		</section>
+		<section class="servico">
+			<div class="container">
+				<article class="card">
+					<div class="box box1">
+						<div class="descritivo">
+							<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/extracao-title.png"/>
+							<p><?php echo get_post_meta( $post->ID,'texto-servico1', true );?></p>
+						</div>
+						<div class="swiper-container swiper-produto">
+							<div class="swiper-wrapper">
+								<?php 
+									$galeria = get_post_meta( $post->ID,'img-servico1', true );					
+									$galeria = explode(",", $galeria);
+									foreach ( $galeria as $foto ) { ?>		
+										<div class="swiper-slide">
+											<img src="<?php echo odin_get_image_url( $foto, 800, 540, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+										</div>
+									<?php }
+								?>		
+							</div>
+						</div>
+					</div>
+					<div class="box box2">
+						<div class="swiper-container swiper-produto">
+							<div class="swiper-wrapper">
+								<?php 
+									$galeria = get_post_meta( $post->ID,'img-servico2', true );					
+									$galeria = explode(",", $galeria);
+									foreach ( $galeria as $foto ) { ?>		
+										<div class="swiper-slide">
+											<img src="<?php echo odin_get_image_url( $foto, 800, 540, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+										</div>
+									<?php }
+								?>		
+							</div>
+						</div>
+						<div class="descritivo">
+							<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/blocos-title.png"/>
+							<p><?php echo get_post_meta( $post->ID,'texto-servico2', true );?></p>
+						</div>
+					</div>
+				</article>
 			</div>
 		</section>
 	</main>

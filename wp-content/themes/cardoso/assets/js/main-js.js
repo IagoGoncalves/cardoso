@@ -96,6 +96,18 @@ jQuery(document).ready(function($) {
 			},    
 	    });
 
+    // Swiper produtos
+		var swiper = new Swiper('.swiper-produto', {
+			speed: 2000,
+			parallax: true,
+			loop: true,
+			spaceBetween: 30,
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+			},    
+	    });
+
     /* Ajax functions */
         $(document).on('click','.blog', function(){
             
@@ -139,3 +151,11 @@ jQuery(document).ready(function($) {
             };
         }
 });
+
+// Área de produtos
+    function openTela(){
+        document.getElementById('bloco1').style.display = 'block';
+    }
+    function fecharModal(){
+        document.getElementById('bloco1').style.display = 'none';
+    }

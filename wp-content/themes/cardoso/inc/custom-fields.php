@@ -239,12 +239,17 @@ function custom_metabox() {
         'id'   => 'separator1', // Obrigatório
         'type' => 'separator' // Obrigatório
       ),
-    // Serviços
+    // Produtos
       array(
-        'id'          => 'servico1', // Obrigatório
-        'label'       => __( 'Serviço 1', 'odin' ), // Obrigatório
-        'type'        => 'text', // Obrigatório
+        'id'          => 'text-produto', // Obrigatório
+        'label'       => __( 'Subtitulo produto', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
       ),
+      array(
+        'id'   => 'separator1', // Obrigatório
+        'type' => 'separator' // Obrigatório
+      ),
+    // Serviços
       array(
         'id'          => 'texto-servico1', // Obrigatório
         'label'       => __( 'Texto Serviço 1', 'odin' ), // Obrigatório
@@ -253,14 +258,9 @@ function custom_metabox() {
       array(
         'id'          => 'img-servico1', // Obrigatório
         'label'       => __( 'Imagem serviço 1', 'odin' ), // Obrigatório
-        'type'        => 'image', // Obrigatório
+        'type'        => 'image_plupload', // Obrigatório
         'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
         'description' => __( '', 'odin' ), // Opcional
-      ),
-      array(
-        'id'          => 'servico2', // Obrigatório
-        'label'       => __( 'Serviço 2', 'odin' ), // Obrigatório
-        'type'        => 'text', // Obrigatório
       ),
       array(
         'id'          => 'texto-servico2', // Obrigatório
@@ -270,7 +270,7 @@ function custom_metabox() {
       array(
         'id'          => 'img-servico2', // Obrigatório
         'label'       => __( 'Imagem serviço 2', 'odin' ), // Obrigatório
-        'type'        => 'image', // Obrigatório
+        'type'        => 'image_plupload', // Obrigatório
         'default'     => '', // Opcional (deve ser o id de uma imagem em mídia)
         'description' => __( '', 'odin' ), // Opcional
       ),
@@ -293,6 +293,24 @@ function custom_metabox() {
       array(
         'id'          => 'imagens-frota', // Obrigatório
         'label'       => __( 'Imagens Frota', 'odin' ), // Obrigatório
+        'type'        => 'image_plupload', // Obrigatório
+        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+      ),
+    )
+  );
+//Produtos
+  $post_metabox = new Odin_Metabox(
+    'conteudo-produtos', // Slug/ID of the Metabox (Required)
+    'INFORMAÇÕES', // Metabox name (Required)
+    'produto', // Slug of Post Type (Optional)
+    'normal', // Context (options: normal, advanced, or side) (Optional)
+    'high' // Priority (options: high, core, default or low) (Optional)
+  );
+  $post_metabox->set_fields(
+    array(  
+      array(
+        'id'          => 'imagens-produto', // Obrigatório
+        'label'       => __( 'Imagens Produto', 'odin' ), // Obrigatório
         'type'        => 'image_plupload', // Obrigatório
         'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
       ),

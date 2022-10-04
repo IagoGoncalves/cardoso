@@ -985,4 +985,139 @@ p{
                 }
                 
         }
+        .produtos{
+                @extend .col-md-12;
+                padding: 0px;
+                background-color: $azul;
+                margin: 120px 0;
+                .container{
+                        padding-top: 90px;
+                        .subtitulo{
+                                color: #fff;
+                                margin-top: 75px;
+                        }
+                        .card{
+                                margin-top: 100px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                .swiper-slide{
+                                        width: auto;
+                                        a{
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                align-items: center;
+                                                color: #fff;
+                                                text-decoration: none;
+                                                transition: all .3s;
+                                                width: 378px;
+                                                height: 455px;
+                                                // border-right: 1px solid rgba(19, 51, 76, 0.4);
+                                                img{
+                                                        margin-bottom: 25px;
+                                                }
+                                                &:hover{
+                                                        transition: all .3s;
+                                                        background-color: $laranja;
+                                                        &:after{
+                                                                content: '+';
+                                                                position: absolute;
+                                                                bottom: 5%;
+                                                                right: 10%;
+                                                                font-weight: 500;
+                                                                font-size: 30px;
+                                                        }
+                                                }
+                                        }
+                                        // &:nth-child(4){
+                                        //         a{
+                                        //                 border-right: none;
+                                        //         }
+                                        // }
+                                }
+                        }
+                        
+                }
+                .blocos{
+                        display: none;
+                        @extend .col-md-12;
+                        padding: 0px;
+                        background-color: $azul-escuro;
+                        position: absolute;
+                        top: 0;
+                        .fechar-modal{
+                                position: absolute;
+                                right: 0;
+                                padding: 25px;
+                                a{
+                                        color: #fff;
+                                        font-size: 24px;
+                                        font-weight: 700;
+                                        text-decoration: none;
+                                }
+                        }
+                        .container{
+                                padding: 0;
+                                .icones{
+                                        @extend .col-md-3;
+                                        padding: 0px;
+                                        padding: 18% 2%;
+                                        background-color: $laranja;
+                                        h4{
+                                                width: 50%;
+                                                font-weight: 700;
+                                                font-size: 24px;
+                                                color: #fff;
+                                                margin-top: 30px;
+                                        }
+                                }
+                                p{
+                                        @extend .col-md-offset-1, .col-md-3;
+                                        padding: 0px;
+                                        color: #fff;
+                                }
+                                .swiper-container{
+                                        @extend .col-md-offset-1, .col-md-4;
+                                        padding: 0px;
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        width: auto !important;
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+        .servico{
+                @extend .col-md-12;
+                padding: 0px;
+                .container{
+                        .card{
+                                .box{
+                                        .descritivo{
+                                                @extend .col-md-6;
+                                                padding: 57px;
+                                                background-color: $azul-escuro;
+                                                p{
+                                                        margin-top: 30px;
+                                                        color: #fff;
+                                                }
+                                        }
+                                        .swiper-container{
+                                                @extend .col-md-6;
+                                                padding: 0px;
+                                                .swiper-wrapper{
+                                                        .swiper-slide{
+                                                                img{
+                                                                        width: 100%;
+                                                                        max-width: 100%;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
 }
