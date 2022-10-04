@@ -35,23 +35,6 @@ function type_post_porsonalizados() {
             'show_in_rest' => true
          )
       );
-   //Produtos
-      $produtos = new Odin_Post_Type(
-         'Produto',
-         'produto'
-      );
-      $produtos->set_labels(
-         array( 'menu_name' => __( 'Produtos', 'odin' ))
-      );
-      $produtos->set_arguments(
-         array(
-            'public' => true,
-            'supports' => array('title','thumbnail','author','revisions' , 'editor'),
-            'has_archive' => true,
-            'menu_icon' => 'dashicons-products',
-            'show_in_rest' => true
-         )
-      );
    //Clientes
       $clientes = new Odin_Post_Type(
          'Cliente',

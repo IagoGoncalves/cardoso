@@ -246,6 +246,86 @@ function custom_metabox() {
         'type'        => 'textarea', // Obrigatório
       ),
       array(
+        'id'          => 'icn-produto1', // Obrigatório
+        'label'       => __( 'Icone produto 1', 'odin' ), // Obrigatório
+        'type'        => 'image', // Obrigatório
+      ),
+      array(
+        'id'          => 'title-produto1', // Obrigatório
+        'label'       => __( 'Titulo produto 1', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+      ),
+      array(
+        'id'          => 'text-produto1', // Obrigatório
+        'label'       => __( 'Texto produto 1', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
+      ),
+      array(
+        'id'          => 'img-produto1', // Obrigatório
+        'label'       => __( 'Imagem serviço 1', 'odin' ), // Obrigatório
+        'type'        => 'image_plupload', // Obrigatório
+      ),
+      array(
+        'id'          => 'icn-produto2', // Obrigatório
+        'label'       => __( 'Icone produto 2', 'odin' ), // Obrigatório
+        'type'        => 'image', // Obrigatório
+      ),
+      array(
+        'id'          => 'title-produto2', // Obrigatório
+        'label'       => __( 'Titulo produto 2', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+      ),
+      array(
+        'id'          => 'text-produto2', // Obrigatório
+        'label'       => __( 'Texto produto 2', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
+      ),
+      array(
+        'id'          => 'img-produto2', // Obrigatório
+        'label'       => __( 'Imagem serviço 2', 'odin' ), // Obrigatório
+        'type'        => 'image_plupload', // Obrigatório
+      ),
+      array(
+        'id'          => 'icn-produto3', // Obrigatório
+        'label'       => __( 'Icone produto 3', 'odin' ), // Obrigatório
+        'type'        => 'image', // Obrigatório
+      ),
+      array(
+        'id'          => 'title-produto3', // Obrigatório
+        'label'       => __( 'Titulo produto 3', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+      ),
+      array(
+        'id'          => 'text-produto3', // Obrigatório
+        'label'       => __( 'Texto produto 3', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
+      ),
+      array(
+        'id'          => 'img-produto3', // Obrigatório
+        'label'       => __( 'Imagem serviço 3', 'odin' ), // Obrigatório
+        'type'        => 'image_plupload', // Obrigatório
+      ),
+      array(
+        'id'          => 'icn-produto4', // Obrigatório
+        'label'       => __( 'Icone produto 4', 'odin' ), // Obrigatório
+        'type'        => 'image', // Obrigatório
+      ),
+      array(
+        'id'          => 'title-produto4', // Obrigatório
+        'label'       => __( 'Titulo produto 4', 'odin' ), // Obrigatório
+        'type'        => 'text', // Obrigatório
+      ),
+      array(
+        'id'          => 'text-produto4', // Obrigatório
+        'label'       => __( 'Texto produto 4', 'odin' ), // Obrigatório
+        'type'        => 'textarea', // Obrigatório
+      ),
+      array(
+        'id'          => 'img-produto4', // Obrigatório
+        'label'       => __( 'Imagem serviço 4', 'odin' ), // Obrigatório
+        'type'        => 'image_plupload', // Obrigatório
+      ),
+      array(
         'id'   => 'separator1', // Obrigatório
         'type' => 'separator' // Obrigatório
       ),
@@ -302,24 +382,6 @@ function custom_metabox() {
         'id'          => 'img-cnt', // Obrigatório
         'label'       => __( 'Imagem contato', 'odin' ), // Obrigatório
         'type'        => 'image', // Obrigatório
-      ),
-    )
-  );
-//Produtos
-  $post_metabox = new Odin_Metabox(
-    'conteudo-produtos', // Slug/ID of the Metabox (Required)
-    'INFORMAÇÕES', // Metabox name (Required)
-    'produto', // Slug of Post Type (Optional)
-    'normal', // Context (options: normal, advanced, or side) (Optional)
-    'high' // Priority (options: high, core, default or low) (Optional)
-  );
-  $post_metabox->set_fields(
-    array(  
-      array(
-        'id'          => 'imagens-produto', // Obrigatório
-        'label'       => __( 'Imagens Produto', 'odin' ), // Obrigatório
-        'type'        => 'image_plupload', // Obrigatório
-        'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
       ),
     )
   );

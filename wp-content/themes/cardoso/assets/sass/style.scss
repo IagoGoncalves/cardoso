@@ -1026,40 +1026,31 @@ p{
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
-                                .swiper-slide{
-                                        width: auto;
-                                        a{
-                                                display: flex;
-                                                flex-direction: column;
-                                                justify-content: center;
-                                                align-items: center;
-                                                color: #fff;
-                                                text-decoration: none;
+                                a{
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        color: #fff;
+                                        text-decoration: none;
+                                        transition: all .3s;
+                                        width: 378px;
+                                        height: 455px;
+                                        // border-right: 1px solid rgba(19, 51, 76, 0.4);
+                                        img{
+                                                margin-bottom: 25px;
+                                        }
+                                        &:hover{
                                                 transition: all .3s;
-                                                width: 378px;
-                                                height: 455px;
-                                                // border-right: 1px solid rgba(19, 51, 76, 0.4);
-                                                img{
-                                                        margin-bottom: 25px;
-                                                }
-                                                &:hover{
-                                                        transition: all .3s;
-                                                        background-color: $laranja;
-                                                        &:after{
-                                                                content: '+';
-                                                                position: absolute;
-                                                                bottom: 5%;
-                                                                right: 10%;
-                                                                font-weight: 500;
-                                                                font-size: 30px;
-                                                        }
+                                                background-color: $laranja;
+                                                &:after{
+                                                        content: '+';
+                                                        position: absolute;
+                                                        bottom: 5%;
+                                                        font-weight: 500;
+                                                        font-size: 30px;
                                                 }
                                         }
-                                        // &:nth-child(4){
-                                        //         a{
-                                        //                 border-right: none;
-                                        //         }
-                                        // }
                                 }
                         }
                         
@@ -1113,10 +1104,14 @@ p{
                                         margin-top: 30px;
                                 }
                         }
-                        p{
+                        .texto{
                                 @extend .col-md-offset-1, .col-md-3;
-                                padding: 0px;
-                                color: #fff;
+                                display: flex;
+                                flex-direction: column;
+                                p{
+                                        padding: 0px;
+                                        color: #fff;
+                                }
                         }
                         .swiper-container{
                                 @extend .col-md-offset-1, .col-md-4;
