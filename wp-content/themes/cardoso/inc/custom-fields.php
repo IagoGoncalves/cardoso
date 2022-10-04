@@ -297,6 +297,12 @@ function custom_metabox() {
         'type'        => 'image_plupload', // Obrigatório
         'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
       ),
+    // Contato
+      array(
+        'id'          => 'img-cnt', // Obrigatório
+        'label'       => __( 'Imagem contato', 'odin' ), // Obrigatório
+        'type'        => 'image', // Obrigatório
+      ),
     )
   );
 //Produtos

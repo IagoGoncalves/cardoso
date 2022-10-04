@@ -1174,5 +1174,51 @@ p{
                         }
                 }
         }
-        
+        .contato{
+                @extend .col-md-12;
+                padding: 0px;
+                margin-top: 170px;
+                .foto{
+                        @extend .col-md-4;
+                        padding: 0px;
+                        img{
+                                width: 100%;
+                                max-width: 100%;
+                        }
+                }
+                .descritivo{
+                        @extend .col-md-4;
+                        padding: 0px;
+                        background-color: $azul;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        height: 527px;
+                        padding: 100px;
+                        a, span{
+                                color: #fff;
+                                font-weight: 400;
+                                font-size: 20px;
+                        }
+                        .telefones{
+                                display: flex;
+                                flex-wrap: wrap;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 100px 0 30px 0;
+                        }
+                        .loc{
+                                text-align: center;
+                                margin-bottom: 30px;
+                        }
+                }
+                .mapa{
+                        @extend .col-md-4;
+                        padding: 0px;
+                        iframe{
+                                width: 100%;
+                        }
+                }
+        }
 }

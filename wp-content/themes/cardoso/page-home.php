@@ -278,6 +278,64 @@ get_header();
                 </div>
 			</div>
 		</section>
+		<section class="contato">
+			<article class="foto">
+				<?php 
+					$galeria = get_post_meta( $post->ID,'img-cnt', true );					
+					$galeria = explode(",", $galeria);
+					foreach ( $galeria as $foto ) { ?>		
+						<img src="<?php echo odin_get_image_url( $foto, 650, 540, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+					<?php }
+				?>	
+			</article>
+			<article class="descritivo">
+				<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/contato-title.png"/>
+				<?php
+					$args = array('post_type' => 'dados','posts_per_page' => 1);
+						$var = new WP_Query($args);
+						if($var->have_posts()):
+							while($var->have_posts()):
+								$var->the_post(); ?>
+									<?php 
+										$telefone1 =  get_post_meta( $post->ID,'telefone1', true );
+										$telefone2 =  get_post_meta( $post->ID,'telefone2', true );
+										$telefone3 =  get_post_meta( $post->ID,'telefone3', true );
+										$email =  get_post_meta( $post->ID,'email1', true );
+										$logradouro =  get_post_meta( $post->ID,'logradouro', true );
+										$endereco =  get_post_meta( $post->ID,'endereco', true );
+										$numero =  get_post_meta( $post->ID,'numero', true );
+										$cidade =  get_post_meta( $post->ID,'cidade', true );
+										$estado =  get_post_meta( $post->ID,'estado', true );
+										$cep =  get_post_meta( $post->ID,'cep', true );
+									?>
+									<div class="telefones">
+										<a class="telefone1 align" href="tel:<?php echo $telefone1 ?>" alt="tel: <?php echo $telefone1 ?>" title="tel: <?php echo $telefone1 ?>" target="_blank">    
+											<?php echo $telefone1 ?>
+										</a>
+																					
+										<a class="telefone2 align" href="tel:<?php echo $telefone2 ?>" alt="tel: <?php echo $telefone2 ?>" title="tel: <?php echo $telefone2 ?>" target="_blank">    
+											<?php echo $telefone2 ?>
+										</a>
+										<a class="telefone3 align" href="tel:<?php echo $telefone3 ?>" alt="tel: <?php echo $telefone3 ?>" title="tel: <?php echo $telefone3 ?>" target="_blank">    
+											<?php echo $telefone1 ?>
+										</a>
+									</div>
+									<a class="loc" href="https://goo.gl/maps/sEy7D7sWYBPUeCo66" target="_blank">
+										<?php echo $logradouro ?> <?php echo $endereco ?>, n° <?php echo $numero ?>, <br> <?php echo $cidade ?>/<?php echo $estado ?> - CEP: <?php echo $cep ?>                       
+                                	</a> 
+									<a class="email" href="mailto:<?php echo $email ?>" target="_blank">
+										<?php echo $email ?>
+									</a>
+								<?php
+							endwhile;
+						endif;
+					wp_reset_postdata(); 
+				?>				
+			</article>
+			<article class="mapa">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.979166232152!2d-46.32336698503549!3d-22.840260285045694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceadc561123131%3A0x49dcedb84f4340fb!2sCardoso%20Materiais%20para%20Constru%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1664892376157!5m2!1spt-BR!2sbr" width="600" height="522" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</article>
+		</section>
 	</main>
 <?php
 get_footer();
