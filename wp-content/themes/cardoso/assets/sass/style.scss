@@ -35,7 +35,7 @@ body{
                 width: 1700px;
         }
         @media screen and (max-width: 1500px){
-                width: 1400px;
+                max-width: 100%;
         }
 }
 
@@ -884,6 +884,14 @@ p{
                                         transform: skewY(5deg);
                                 }
                         }
+                        @media screen and (max-width: 1500px){
+                                .box1{
+                                        margin-top: -143px;
+                                }
+                                .box2{
+                                        margin-top: -88px;
+                                }
+                        }
                 }
         }
         .sobre{
@@ -1123,6 +1131,13 @@ p{
                                 }
                         }
                 }
+                @media screen and (max-width: 1500px){
+                        .container{
+                                .icones{
+                                        padding: 19% 2%;
+                                }
+                        }
+                }
         }
         .servico{
                 @extend .col-md-12;
@@ -1164,12 +1179,21 @@ p{
                                 .card{
                                         .box{
                                                 .descritivo{
-                                                        height: 462px;
+                                                        height: 540px;
                                                         p{
                                                                 font-size: 18px;
                                                         }
                                                         img{
                                                                 max-width: 40%;
+                                                        }
+                                                }
+                                                .swiper-container{
+                                                        height: 540px;
+                                                        .swiper-slide{
+                                                                img{
+                                                                        width: auto !important;
+                                                                        max-width: fit-content !important;
+                                                                }
                                                         }
                                                 }
                                         }
@@ -1273,6 +1297,21 @@ p{
                         padding: 0px;
                         iframe{
                                 width: 100%;
+                        }
+                }
+                @media screen and (max-width: 1500px){
+                        .foto{
+                                height: 527px;
+                                img{
+                                    width: auto;
+                                    max-width: fit-content;    
+                                }
+                        }
+                        .descritivo{
+                                padding: 20px;
+                                .telefones{
+                                        margin: 30px 0;
+                                }
                         }
                 }
         }

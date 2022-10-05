@@ -316,7 +316,7 @@ get_header();
 									$galeria = get_post_meta( $post->ID,'img-servico1', true );					
 									$galeria = explode(",", $galeria);
 									foreach ( $galeria as $foto ) { ?>		
-										<div class="swiper-slide">
+										<div class="swiper-slide align">
 											<img src="<?php echo odin_get_image_url( $foto, 800, 540, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
 										</div>
 									<?php }
@@ -331,7 +331,7 @@ get_header();
 									$galeria = get_post_meta( $post->ID,'img-servico2', true );					
 									$galeria = explode(",", $galeria);
 									foreach ( $galeria as $foto ) { ?>		
-										<div class="swiper-slide">
+										<div class="swiper-slide align">
 											<img src="<?php echo odin_get_image_url( $foto, 800, 540, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
 										</div>
 									<?php }
