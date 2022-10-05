@@ -95,13 +95,16 @@ get_header();
 				<article class="descritivo">
 					<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/sobre-a-empresa.png"/>
 					<div class="section">
+						<article class="foto mobile">
+							<?php echo odin_thumbnail(646, 488, true, true);?>
+						</article>
 						<div class="partial support">
 							<?php the_content()?>
 						</div>
 						<a class="txt-more" href="javascript:void(0);"></a>
 					</div>
 				</article>
-				<article class="foto">
+				<article class="foto desktop">
 					<?php echo odin_thumbnail(646, 488, true, true);?>
 				</article>
 			</div>

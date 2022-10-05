@@ -224,9 +224,6 @@ header{
                 z-index: 9999; 
                 top: -300px;
                 .container{  
-                        // @media screen and (max-width: 1880px){
-                        //         margin: 0 2%;
-                        // }
                         @media screen and (max-width: 992px){
                                 display: none;
                         }
@@ -260,7 +257,7 @@ header{
                 top: 0px;     
         }
         .menu-diferente-tablet{
-                background-color:#545f4fd4;
+                background-color: $azul-escuro;
         }
         .menu-tablet{
                 width: 100%;
@@ -701,6 +698,9 @@ p{
         font-size: 20px;
         font-weight: 400;
         margin: 0;
+        @media screen and (max-width: 1200px){
+                font-size: 18px;
+        }
 }
 .home{
         .banner{
@@ -847,6 +847,26 @@ p{
                                 }
                         }
                 }
+                @media screen and (max-width: 1200px){
+                        .swiper-container{
+                                .swiper-wrapper{
+                                        .swiper-slide{
+                                                .padrao-banner{
+                                                        .descricoes{
+                                                                h2{
+                                                                        font-size: 42px;
+                                                                }
+                                                        }
+                                                }
+                                                .banner2, .banner3{
+                                                        .descricoes{
+                                                                width: 100%;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
                 @media screen and (max-width: 770px){
                         height: auto;
                 }
@@ -892,6 +912,23 @@ p{
                                         margin-top: -88px;
                                 }
                         }
+                        @media screen and (max-width: 1200px){
+                                .box1{
+                                        .card{
+                                                h2{
+                                                        font-size: 24px;
+                                                }
+                                        }
+                                }
+                                .box2{
+                                        margin-top: -97px;
+                                        .card{
+                                                h2{
+                                                        font-size: 24px;
+                                                }
+                                        }
+                                }
+                        }
                 }
         }
         .sobre{
@@ -918,6 +955,9 @@ p{
                                                 height: 200px; /* limita a altura aqui, assim irá limitar o texto*/
                                                 overflow: hidden;
                                         }
+                                        .mobile{
+                                                display: none;
+                                        }
                                 }
                                 .section > a::before {
                                         content: "Ocultar"; /*Texto de quando o texto estiver visivel*/
@@ -932,6 +972,31 @@ p{
                                 display: flex;
                                 justify-content: flex-end;
                                 align-items: center;
+                        }
+                }
+                @media screen and (max-width: 1200px){
+                        .container{
+                                .descritivo{
+                                        width: 100%;
+                                        .section{
+                                                display: flex;
+                                                flex-direction: column;
+                                                .mobile{
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        width: 100%;
+                                                        max-width: 100%;
+                                                }
+                                                .partial{
+                                                        margin-top: 20px;
+                                                        height: 100px;
+                                                }
+                                        }
+                                }
+                                .desktop{
+                                        display: none;
+                                }
                         }
                 }
         }
@@ -1013,6 +1078,21 @@ p{
                                                         }
                                                 }
                                         }
+                                        @media screen and (max-width: 1200px){
+                                                .inner{
+                                                        .date{
+                                                                margin: 0 0 0 -55px;
+                                                        }
+                                                        .texto{
+                                                                p{
+                                                                        font-size: 18px;
+                                                                }
+                                                                &:after{
+                                                                        top: 15px;
+                                                                }
+                                                        }
+                                                }
+                                        }
                                 }
                         }
                 }
@@ -1047,6 +1127,9 @@ p{
                                         // border-right: 1px solid rgba(19, 51, 76, 0.4);
                                         img{
                                                 margin-bottom: 25px;
+                                        }
+                                        h4{
+                                                text-align: center;
                                         }
                                         &:hover{
                                                 transition: all .3s;
@@ -1138,6 +1221,22 @@ p{
                                 }
                         }
                 }
+                @media screen and (max-width: 1200px){
+                        .container{
+                                .icones{
+                                        width: 25%;
+                                        padding: 23% 2%;
+                                }
+                                .texto{
+                                        width: 40%;
+                                        margin: 0;
+                                }
+                                .swiper-container{
+                                        width: 35%;
+                                        margin: 0;
+                                }
+                        }
+                }
         }
         .servico{
                 @extend .col-md-12;
@@ -1199,6 +1298,20 @@ p{
                                         }
                                 }
                         }
+                }
+                @media screen and (max-width: 1200px){
+                        .container{
+                                .card{
+                                        .box{
+                                                .descritivo{
+                                                        height: 540px;
+                                                        p{
+                                                                font-size: 16px;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }  
                 }
         }
         .frota{
@@ -1312,6 +1425,17 @@ p{
                                 .telefones{
                                         margin: 30px 0;
                                 }
+                        }
+                }
+                @media screen and (max-width: 1200px){
+                        .foto{
+                                display: none;
+                        }
+                        .descritivo{
+                                width: 50%;
+                        }
+                        .mapa{
+                                width: 50%;
                         }
                 }
         }
