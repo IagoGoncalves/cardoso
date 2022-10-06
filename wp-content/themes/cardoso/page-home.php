@@ -111,7 +111,7 @@ get_header();
 		</section>
 		<section class="linha-tempo">
 			<div class="container">
-				<div id="timeline">
+				<div id="timeline" class="desktop">
 					<?php 
 						$args = array('post_type' => 'timeline','posts_per_page' => -1, 'orderby' => 'title', 'order' => 'asc');
 						$var = new WP_Query($args);    
@@ -129,6 +129,24 @@ get_header();
 						endif;
 					wp_reset_postdata(); ?>
 				</div>
+				<div class="swiper-container clientes-destaque mobile">
+                    <div class="swiper-wrapper">
+                        <?php 
+							$args = array('post_type' => 'timeline','posts_per_page' => -1, 'orderby' => 'title', 'order' => 'asc');
+                            $var = new WP_Query($args);
+                            if($var->have_posts()):
+                                while($var->have_posts()):
+                                    $var->the_post();?>                                   
+                                        <div class="swiper-slide">
+											<span class="date"><?php the_title()?></span>
+											<div class="texto"><?php the_content()?></div>
+                                        </div>
+                                    <?php
+                                endwhile;
+                            endif;
+                        wp_reset_postdata(); ?>
+                    </div> 
+                </div>
 			</div>
 		</section>
 		<section class="produtos" id="bloco0">
@@ -327,7 +345,7 @@ get_header();
 							</div>
 						</div>
 					</div>
-					<div class="box box2">
+					<div class="box box2 desktop">
 						<div class="swiper-container swiper-produto">
 							<div class="swiper-wrapper">
 								<?php 
@@ -346,31 +364,75 @@ get_header();
 							<p><?php echo get_post_meta( $post->ID,'texto-servico2', true );?></p>
 						</div>
 					</div>
+					<div class="box box2 mobile">
+						<div class="descritivo">
+							<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/blocos-title.png"/>
+							<p><?php echo get_post_meta( $post->ID,'texto-servico2', true );?></p>
+						</div>
+						<div class="swiper-container swiper-produto">
+							<div class="swiper-wrapper">
+								<?php 
+									$galeria = get_post_meta( $post->ID,'img-servico2', true );					
+									$galeria = explode(",", $galeria);
+									foreach ( $galeria as $foto ) { ?>		
+										<div class="swiper-slide align">
+											<img src="<?php echo odin_get_image_url( $foto, 800, 540, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+										</div>
+									<?php }
+								?>		
+							</div>
+						</div>
+					</div>
 				</article>
 			</div>
 		</section>
 		<section class="frota">
-			<div class="swiper-container swiper-frota">
-				<div class="swiper-wrapper">
-					<?php 
-						$galeria = get_post_meta( $post->ID,'imagens-frota', true );					
-						$galeria = explode(",", $galeria);
-						foreach ( $galeria as $foto ) { ?>		
-							<div class="swiper-slide">
-								<img src="<?php echo odin_get_image_url( $foto, 1060, 600, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
-							</div>
-						<?php }
-					?>		
+			<div class='desktop'>
+				<div class="swiper-container swiper-frota">
+					<div class="swiper-wrapper">
+						<?php 
+							$galeria = get_post_meta( $post->ID,'imagens-frota', true );					
+							$galeria = explode(",", $galeria);
+							foreach ( $galeria as $foto ) { ?>		
+								<div class="swiper-slide">
+									<img src="<?php echo odin_get_image_url( $foto, 1060, 600, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+								</div>
+							<?php }
+						?>		
+					</div>
+					<div class="navigation">
+						<div class="swiper-button-prev swiper-button-white"></div>
+						<div class="swiper-button-next swiper-button-white"></div>	
+					</div>
 				</div>
-				<div class="navigation">
-					<div class="swiper-button-prev swiper-button-white"></div>
-					<div class="swiper-button-next swiper-button-white"></div>	
+				<article class="descritivo">
+					<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/frota-title.png"/>
+					<p><?php echo get_post_meta( $post->ID,'texto-frota', true );?></p>
+				</article>
+			</div>
+			<div class='mobile'>
+				<article class="descritivo">
+					<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/frota-title.png"/>
+					<p><?php echo get_post_meta( $post->ID,'texto-frota', true );?></p>
+				</article>
+				<div class="swiper-container swiper-frota">
+					<div class="swiper-wrapper">
+						<?php 
+							$galeria = get_post_meta( $post->ID,'imagens-frota', true );					
+							$galeria = explode(",", $galeria);
+							foreach ( $galeria as $foto ) { ?>		
+								<div class="swiper-slide">
+									<img src="<?php echo odin_get_image_url( $foto, 1060, 600, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+								</div>
+							<?php }
+						?>		
+					</div>
+					<div class="navigation">
+						<div class="swiper-button-prev swiper-button-white"></div>
+						<div class="swiper-button-next swiper-button-white"></div>	
+					</div>
 				</div>
 			</div>
-			<article class="descritivo">
-				<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/frota-title.png"/>
-				<p><?php echo get_post_meta( $post->ID,'texto-frota', true );?></p>
-			</article>
 		</section>
 		<section class="clientes">
 			<div class="container">

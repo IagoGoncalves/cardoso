@@ -286,7 +286,7 @@ header{
                                 align-items: center; 
                                 z-index: 9; 
                                 img{
-                                        width: 40%;
+                                        width: 50%;
                                 }                           
                         }
                         .btn-reserve{
@@ -297,7 +297,6 @@ header{
                                 text-transform: uppercase;
                         }
                 }
-
                 #menu-trigger1{
                     width: 45px;
                     height: 40px;
@@ -308,17 +307,15 @@ header{
                     cursor: pointer;
                     z-index: 999;         
                 }
-
                 .menu-trigger1  div {
                     width: 30px;
                     height: 4px;
                     background: rgb(51, 51, 51) none repeat scroll 0% 0%;
                     margin-top: 3px;
                 }
-
                 .conteudo{
                         position: absolute;
-                        background: #a1a78af5;
+                        background: $azul-escuro;
                         display: none;
                         width: 100%;
                         height: 100vh;                                  
@@ -674,22 +671,14 @@ footer{
                 }         
         }
         @media only screen and (max-width: 600px){
-                article{
-                        .dados{
-                                .telefones{
-                                        a{
-                                                font-size: 16px;
-                                        }
-                                }
+                .primeira-parte{
+                        padding-top: 40px;
+                        padding-bottom: 30px;
+                        .icons{
+                                padding: 40px 0;
                         }
-                        .rede-socias{
-                                justify-content: flex-start;
-                                padding: 0 15px;
-                        }
-                }
-                .copyright{
-                        p{
-                                font-size: 10px;
+                        .lista-menu{
+                                display: none;
                         }
                 }
         }
@@ -700,6 +689,9 @@ p{
         margin: 0;
         @media screen and (max-width: 1200px){
                 font-size: 18px;
+        }
+        @media screen and (max-width: 600px){
+                font-size: 16px;
         }
 }
 .home{
@@ -723,10 +715,7 @@ p{
                                                         width: 100%;
                                                         height: 100%;
                                                         overflow: hidden;
-                                                        position:relative;
-                                                        @media screen and (max-width: 770px) and (min-width: 220px) {
-                                                                height: 60vh;
-                                                        }                                
+                                                        position:relative;                              
                                                         .foto{
                                                                 background-repeat: no-repeat;
                                                                 background-position: center;
@@ -868,7 +857,59 @@ p{
                         }
                 }
                 @media screen and (max-width: 770px){
-                        height: auto;
+                        .swiper-container{
+                                .swiper-wrapper{
+                                        .swiper-slide{
+                                                .padrao-banner{
+                                                        .descricoes{
+                                                                h2{
+                                                                        font-size: 28px;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                                .navegation{
+                                        .swiper-pagination{
+                                                .swiper-pagination-bullet{
+                                                        width: 25px;
+                                                        height: 8px;
+                                                }
+                                                .swiper-button-white{
+                                                        margin-top: -54px;
+                                                        width: 25px;
+                                                        height: 8px;
+                                                }
+                                        }
+                                }
+                        }
+                }
+                @media screen and (max-width: 600px){
+                        .swiper-container{
+                                .swiper-wrapper{
+                                        .swiper-slide{
+                                                .padrao-banner{
+                                                        .descricoes{
+                                                                h2{
+                                                                        font-size: 22px;
+                                                                }
+                                                        }
+                                                }
+                                                .banner1{
+                                                        .descricoes{
+                                                                width: 100%;
+                                                        }
+                                                }
+                                                .banner2, .banner3{
+                                                        .descricoes{
+                                                                h2{
+                                                                        width: 100%;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
                 }
         } 
         .flag{
@@ -884,8 +925,8 @@ p{
                         }
                         .box1{
                                 background: linear-gradient(90deg, #13334C 3.39%, #005792 100%);
-                                padding: 120px 100px 100px 100px;
-                                margin-top: -125px;
+                                padding: 100px;
+                                margin-top: -105px;
                                 margin-left: 120px;
                                 transform: skewY(5deg);
                                 .card{
@@ -906,14 +947,12 @@ p{
                         }
                         @media screen and (max-width: 1500px){
                                 .box1{
-                                        margin-top: -143px;
-                                }
-                                .box2{
-                                        margin-top: -88px;
+                                        margin-top: -135px;
                                 }
                         }
                         @media screen and (max-width: 1200px){
                                 .box1{
+                                        margin-top: -125px;
                                         .card{
                                                 h2{
                                                         font-size: 24px;
@@ -927,6 +966,46 @@ p{
                                                         font-size: 24px;
                                                 }
                                         }
+                                }
+                        }
+                        @media screen and (max-width: 770px){
+                                .box1{
+                                        margin-top: -100px;
+                                        padding: 50px;
+                                        .align{
+                                                h2{
+                                                        font-size: 20px;
+                                                }
+                                        }
+                                }
+                                .box2{
+                                        padding: 50px;
+                                        margin-top: -80px;
+                                        .align{
+                                                h2{
+                                                        font-size: 20px;
+                                                }
+                                        }
+                                }
+                        }
+                        @media screen and (max-width: 600px){
+                                .box1, .box2{
+                                        padding: 40px;
+                                        .card{
+                                                img{
+                                                        display: none;
+                                                }
+                                                h2{
+                                                        margin: 0;
+                                                        font-size: 16px;
+                                                }
+                                        }
+                                }
+                                .box1{
+                                        margin-top: -91px;
+                                }
+                                .box2{
+                                        margin-top: -77px;
                                 }
                         }
                 }
@@ -996,6 +1075,28 @@ p{
                                 }
                                 .desktop{
                                         display: none;
+                                }
+                        }
+                }
+                @media screen and (max-width: 600px){
+                        margin: 60px 0;
+                        .container{
+                                .descritivo{
+                                        .titulo-sobre{
+                                                max-width: 35%;
+                                        }
+                                        .section{
+                                                .partial{
+                                                        height: 95px;
+                                                }
+                                                .support{
+                                                        margin-top: 20px;
+                                                }
+                                                a{
+                                                        font-size: 16px;
+                                                        margin-top: 5px;
+                                                }
+                                        }
                                 }
                         }
                 }
@@ -1078,7 +1179,9 @@ p{
                                                         }
                                                 }
                                         }
-                                        @media screen and (max-width: 1200px){
+                                }
+                                @media screen and (max-width: 1200px){
+                                        article{
                                                 .inner{
                                                         .date{
                                                                 margin: 0 0 0 -55px;
@@ -1090,6 +1193,26 @@ p{
                                                                 &:after{
                                                                         top: 15px;
                                                                 }
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                        .mobile{
+                                display: none;
+                        }
+                        @media screen and (max-width: 770px){
+                                .desktop{
+                                        display:none;
+                                }
+                                .mobile{
+                                        display:block;
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        .date{
+                                                                font-size: 32px;
+                                                                color: $laranja;
+                                                                font-weight: 700;
                                                         }
                                                 }
                                         }
@@ -1162,6 +1285,46 @@ p{
                                 }
                         }
                 }
+                @media screen and (max-width: 990px){
+                        .container{
+                                .card{
+                                        margin-top: 0px; 
+                                }
+                        }
+                }
+                @media screen and (max-width: 770px){
+                        .container{
+                                .card{
+                                        flex-flow: wrap;
+                                        a{
+                                                height: auto;  
+                                                width: 50%;
+                                                margin: 50px 0;
+                                        }
+                                }
+                        }
+                }
+                @media screen and (max-width: 600px){
+                        margin: 60px 0;
+                        .container{
+                                padding-top: 50px;
+                                .titulo-sobre{
+                                        max-width: 35%;
+                                }
+                                .subtitulo{
+                                        margin-top: 30px;
+                                }
+                                .card{
+                                        a{
+                                                margin: 25px 0;
+                                                img{
+                                                        max-width: 30%;
+                                                        margin-bottom: 10px;
+                                                }
+                                        }
+                                }
+                        }
+                }
         }
         .openProdutos{
                 display: none;
@@ -1173,6 +1336,7 @@ p{
                         position: absolute;
                         right: 0;
                         padding: 25px;
+                        z-index: 9;
                         a{
                                 color: #fff;
                                 font-size: 24px;
@@ -1237,6 +1401,47 @@ p{
                                 }
                         }
                 }
+                @media screen and (max-width: 990px){
+                        .container{
+                                .icones{
+                                        padding: 30% 2%;
+                                }
+                        }
+                }
+                @media screen and (max-width: 770px){
+                        .container{
+                                flex-direction: column;
+                                .icones{
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 100%;
+                                        padding: 2%;
+                                        img{
+                                                max-width: 15%;;
+                                        }
+                                        h4{
+                                                margin: 0 0 0 20px;
+                                                font-size: 16px;
+                                        }
+                                }
+                                .texto{
+                                        width: 100%;
+                                        margin: 20px 0;
+                                }
+                                .swiper-container{
+                                        width: 53%;
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        width: 100%;
+                                                        img{
+                                                                max-width: 50%;
+                                                        }
+                                                }
+                                        }
+                                }
+                        }
+                }
         }
         .servico{
                 @extend .col-md-12;
@@ -1270,6 +1475,9 @@ p{
                                                         }
                                                 }
                                         }
+                                }
+                                .mobile{
+                                        display: none;
                                 }
                         }
                 }
@@ -1313,11 +1521,31 @@ p{
                                 }
                         }  
                 }
+                @media screen and (max-width: 770px){
+                        .container{
+                                .card{
+                                        .desktop{
+                                                display: none;
+                                        }
+                                        .mobile{
+                                                display: block;
+                                        }
+                                        .box{
+                                                .descritivo{
+                                                        height: auto;
+                                                }
+                                        }
+                                }
+                        }
+                }
         }
         .frota{
                 @extend .col-md-12;
                 padding: 0px;
                 margin: 120px 0;
+                .mobile{
+                        display: none;
+                }
                 .swiper-container{
                         @extend .col-md-6;
                         padding: 0px;
@@ -1336,10 +1564,6 @@ p{
                                         height: 20px;
                                         margin-top: 0;
                                 }
-                                .swiper-button-prev{
-                                }
-                                .swiper-button-next{
-                                }
                         }
                 }
                 .descritivo{
@@ -1352,6 +1576,45 @@ p{
                                 color: #fff;
                         }
                 }
+                @media screen and (max-width: 770px){
+                        .mobile{
+                                display: block;
+                                .descritivo{
+                                        height: auto;
+                                }
+                                .swiper-container{
+                                        .swiper-wrapper{
+                                                .swiper-slide{
+                                                        img{
+                                                                max-width: 100%;
+                                                                width: 100%;
+                                                        }
+                                                }
+                                        }
+                                        .navigation{
+                                                display: none;
+                                        }
+                                }
+                        }
+                        .desktop{
+                                display: none;
+                        }
+                }
+                @media screen and (max-width: 600px){
+                        margin: 60px 0;
+                        .mobile{
+                                .descritivo{
+                                        padding: 40px;
+                                        .titulo-sobre{
+                                                max-width: 30%;
+                                        }
+                                        p{
+                                                margin-top: 30px;
+                                        }
+                                }
+                        }
+                
+                }
         }
         .clientes{
                 @extend .col-md-12;
@@ -1362,6 +1625,22 @@ p{
                                 .swiper-wrapper{
                                         display: flex;
                                         align-items: center;
+                                        .swiper-slide{
+                                                .box{
+                                                        display: flex;
+                                                        justify-content: center;
+                                                }
+                                        }
+                                }
+                        }
+                }
+                @media screen and (max-width: 600px){
+                        .container{
+                                .titulo-sobre{
+                                        max-width: 35%;
+                                }
+                                .swiper-container{
+                                        margin-top: 30px;
                                 }
                         }
                 }
@@ -1436,6 +1715,32 @@ p{
                         }
                         .mapa{
                                 width: 50%;
+                        }
+                }
+                @media screen and (max-width: 990px){
+                        .descritivo{
+                                width: 100%;
+                        }
+                        .mapa{
+                                width: 100%;
+                        }
+                }
+                @media screen and (max-width: 600px){
+                        margin-top: 60px;
+                        .descritivo{
+                                height: auto;
+                                padding: 40px 0px;
+                                .titulo-sobre{
+                                        max-width: 35%;
+                                }
+                                a{
+                                        font-size: 16px;
+                                }
+                        }
+                        .mapa{
+                                iframe{
+                                        height: auto;
+                                }
                         }
                 }
         }

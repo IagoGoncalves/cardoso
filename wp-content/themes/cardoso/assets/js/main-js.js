@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
             }
         });
         jQuery(window).scroll(function () {
-            if (jQuery(this).scrollTop() > 500) {
+            if (jQuery(this).scrollTop() > 150) {
                 $("#menu-tablet").addClass("menu-diferente-tablet");
             } else {
                 $("#menu-tablet").removeClass("menu-diferente-tablet");
@@ -95,7 +95,6 @@ jQuery(document).ready(function($) {
 				delay: 5000,
 			},    
 	    });
-
     // Swiper produtos
 		var swiper = new Swiper('.swiper-produto', {
 			speed: 2000,
@@ -107,7 +106,6 @@ jQuery(document).ready(function($) {
 				delay: 3000,
 			},    
 	    });
-
     // Swiper frota
 		var swiper = new Swiper('.swiper-frota', {
 			speed: 2000,
@@ -123,7 +121,6 @@ jQuery(document).ready(function($) {
 				delay: 3000,
 			},    
 	    });
-
     // Clientes
         var swiper = new Swiper('.clientes-destaque', {
             slidesPerView: 5,
@@ -136,7 +133,7 @@ jQuery(document).ready(function($) {
                     spaceBetween: 10,
                 },
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 20,
                 },
                 640: {
@@ -152,7 +149,6 @@ jQuery(document).ready(function($) {
                 delay: 3000,
             },
         });
-
     /* Ajax functions */
         $(document).on('click','.blog', function(){
             
@@ -178,13 +174,11 @@ jQuery(document).ready(function($) {
             });
             
         });
-
     /* Scroll das Section */
 		$(".scroll").click(function(event){        
 	        event.preventDefault();
 	        $('html,body').animate({scrollTop:$(this.hash).offset().top -100}, 800);
 		});
-
     // Efeito 'mostrar mais'
         var morelinks = document.querySelectorAll(".section > .txt-more");
         for (var i = 0, j = morelinks.length; i < j; i++) {
