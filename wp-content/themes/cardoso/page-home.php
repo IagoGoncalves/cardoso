@@ -93,7 +93,7 @@ get_header();
 		<section class="sobre">
 			<div class="container">
 				<article class="descritivo">
-					<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/sobre-a-empresa.png"/>
+					<h2>Sobre a empresa</h2>
 					<div class="section">
 						<article class="foto mobile">
 							<?php echo odin_thumbnail(646, 488, true, true);?>
@@ -161,7 +161,7 @@ get_header();
 				$textProduto4 =  get_post_meta( $post->ID,'text-produto4', true );
 			?>
 			<div class="container">
-				<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/produtos.png"/>
+				<h2>Produtos</h2>
 				<p class="subtitulo"><?php echo get_post_meta( $post->ID,'text-produto', true );?></p>
 				<article class="card">
 					<a href="javascript:void(0);" class="box" onclick='openTela1()'>
@@ -328,7 +328,7 @@ get_header();
 				<article class="card">
 					<div class="box box1">
 						<div class="descritivo">
-							<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/extracao-title.png"/>
+							<h2>Extração de areia e cascalho</h2>
 							<p><?php echo get_post_meta( $post->ID,'texto-servico1', true );?></p>
 						</div>
 						<div class="swiper-container swiper-produto">
@@ -360,13 +360,13 @@ get_header();
 							</div>
 						</div>
 						<div class="descritivo">
-							<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/blocos-title.png"/>
+							<h2>Blocos e artefatos de cimento</h2>
 							<p><?php echo get_post_meta( $post->ID,'texto-servico2', true );?></p>
 						</div>
 					</div>
 					<div class="box box2 mobile">
 						<div class="descritivo">
-							<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/blocos-title.png"/>
+							<h2>Blocos e artefatos de cimento</h2>
 							<p><?php echo get_post_meta( $post->ID,'texto-servico2', true );?></p>
 						</div>
 						<div class="swiper-container swiper-produto">
@@ -406,13 +406,13 @@ get_header();
 					</div>
 				</div>
 				<article class="descritivo">
-					<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/frota-title.png"/>
+					<h2>Frotas</h2>
 					<p><?php echo get_post_meta( $post->ID,'texto-frota', true );?></p>
 				</article>
 			</div>
 			<div class='mobile'>
 				<article class="descritivo">
-					<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/frota-title.png"/>
+					<h2>Frotas</h2>
 					<p><?php echo get_post_meta( $post->ID,'texto-frota', true );?></p>
 				</article>
 				<div class="swiper-container swiper-frota">
@@ -436,7 +436,7 @@ get_header();
 		</section>
 		<section class="clientes">
 			<div class="container">
-				<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/clientes.png"/>
+				<h2>Clientes</h2>
 				<div class="swiper-container clientes-destaque">
                     <div class="swiper-wrapper">
                         <?php 
@@ -469,7 +469,7 @@ get_header();
 				?>	
 			</article>
 			<article class="descritivo">
-				<img class="titulo-sobre" src="<?php echo get_template_directory_uri(); ?>/assets/images/contato-title.png"/>
+				<h2>Contato</h2>
 				<?php
 					$args = array('post_type' => 'dados','posts_per_page' => 1);
 						$var = new WP_Query($args);
@@ -501,7 +501,7 @@ get_header();
 										</a>
 									</div>
 									<a class="loc" href="https://goo.gl/maps/sEy7D7sWYBPUeCo66" target="_blank">
-										<?php echo $logradouro ?> <?php echo $endereco ?>, n° <?php echo $numero ?>, <br> <?php echo $cidade ?>/<?php echo $estado ?> - CEP: <?php echo $cep ?>                       
+										<?php echo $logradouro ?> <?php echo $endereco ?>, Nº <?php echo $numero ?>, <br> <?php echo $cidade ?>/<?php echo $estado ?> - CEP: <?php echo $cep ?>                       
                                 	</a> 
 									<a class="email" href="mailto:<?php echo $email ?>" target="_blank">
 										<?php echo $email ?>
