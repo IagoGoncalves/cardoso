@@ -93,7 +93,7 @@ get_header();
 		</section>
 		<section class="sobre">
 			<div class="container">
-				<article class="descritivo">
+				<article class="descritivo E-direita">
 					<h2>Sobre a empresa</h2>
 					<div class="section">
 						<article class="foto mobile">
@@ -105,7 +105,7 @@ get_header();
 						<a class="txt-more" href="javascript:void(0);"></a>
 					</div>
 				</article>
-				<article class="foto desktop">
+				<article class="foto desktop E-esquerda">
 					<?php echo odin_thumbnail(646, 488, true, true);?>
 				</article>
 			</div>
@@ -121,8 +121,8 @@ get_header();
 								$var->the_post();?>  
 									<article>
 										<div class="inner">
-											<span class="date"><?php the_title()?></span>
-											<div class="texto"><?php the_content()?></div>
+											<span class="date E-fadein"><?php the_title()?></span>
+											<div class="texto E-descer"><?php the_content()?></div>
 										</div>
 									</article>
 								<?php
@@ -162,7 +162,7 @@ get_header();
 				$titleProduto4 =  get_post_meta( $post->ID,'title-produto4', true );
 				$textProduto4 =  get_post_meta( $post->ID,'text-produto4', true );
 			?>
-			<div class="container">
+			<div class="container E-fadein">
 				<h2>Produtos</h2>
 				<p class="subtitulo"><?php echo get_post_meta( $post->ID,'text-produto', true );?></p>
 				<article class="card">
@@ -325,7 +325,7 @@ get_header();
 				</div>
 			</div>
 		</section>
-		<section class="servico">
+		<section class="servico E-fadein">
 			<div class="container">
 				<article class="card">
 					<div class="box box1">
@@ -388,7 +388,7 @@ get_header();
 				</article>
 			</div>
 		</section>
-		<section class="frota">
+		<section class="frota E-fadein">
 			<span id="frota"></span>
 			<div class='desktop'>
 				<div class="swiper-container swiper-frota">
@@ -437,13 +437,13 @@ get_header();
 				</div>
 			</div>
 		</section>
-		<section class="clientes">
+		<section class="clientes E-fadein">
 			<div class="container">
 				<h2> Alguns clientes</h2>
 				<div class="swiper-container clientes-destaque">
                     <div class="swiper-wrapper">
                         <?php 
-                            $args = array('post_type' => 'clientes','posts_per_page' => -1);
+                            $args = array('post_type' => 'clientes','posts_per_page' => -1, 'orderby' => 'rand');
                             $var = new WP_Query($args);
                             if($var->have_posts()):
                                 while($var->have_posts()):
@@ -463,7 +463,7 @@ get_header();
 		</section>
 		<section class="contato">
 			<span id="contato"></span>
-			<article class="foto">
+			<article class="foto E-direita">
 				<?php 
 					$galeria = get_post_meta( $post->ID,'img-cnt', true );					
 					$galeria = explode(",", $galeria);
@@ -472,7 +472,7 @@ get_header();
 					<?php }
 				?>	
 			</article>
-			<article class="descritivo">
+			<article class="descritivo E-subir">
 				<h2>Contato</h2>
 				<?php
 					$args = array('post_type' => 'dados','posts_per_page' => 1);
@@ -483,8 +483,9 @@ get_header();
 									<?php 
 										$telefone1 =  get_post_meta( $post->ID,'telefone1', true );
 										$telefone2 =  get_post_meta( $post->ID,'telefone2', true );
-										$telefone3 =  get_post_meta( $post->ID,'telefone3', true );
+										$whatsapp =  get_post_meta( $post->ID,'whatsapp', true );
 										$email =  get_post_meta( $post->ID,'email1', true );
+										$email2 =  get_post_meta( $post->ID,'email2', true );
 										$logradouro =  get_post_meta( $post->ID,'logradouro', true );
 										$endereco =  get_post_meta( $post->ID,'endereco', true );
 										$numero =  get_post_meta( $post->ID,'numero', true );
@@ -500,8 +501,9 @@ get_header();
 										<a class="telefone2 align" href="tel:<?php echo $telefone2 ?>" alt="tel: <?php echo $telefone2 ?>" title="tel: <?php echo $telefone2 ?>" target="_blank">    
 											<?php echo $telefone2 ?>
 										</a>
-										<a class="telefone3 align" href="tel:<?php echo $telefone3 ?>" alt="tel: <?php echo $telefone3 ?>" title="tel: <?php echo $telefone3 ?>" target="_blank">    
-											<?php echo $telefone1 ?>
+										<a class="telefone3 align" href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp ?>&text=Olá, vim pelo site." alt="<?php echo $whatsapp ?>" title="<?php echo $whatsapp ?>1" target="_blank">    
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-whats3.png"/>
+											<?php echo $whatsapp ?>
 										</a>
 									</div>
 									<a class="loc" href="https://goo.gl/maps/sEy7D7sWYBPUeCo66" target="_blank">
@@ -510,13 +512,16 @@ get_header();
 									<a class="email" href="mailto:<?php echo $email ?>" target="_blank">
 										<?php echo $email ?>
 									</a>
+									<a class="email" href="mailto:<?php echo $email2 ?>" target="_blank">
+										<?php echo $email2 ?>
+									</a>
 								<?php
 							endwhile;
 						endif;
 					wp_reset_postdata(); 
 				?>				
 			</article>
-			<article class="mapa">
+			<article class="mapa E-esquerda">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.979166232152!2d-46.32336698503549!3d-22.840260285045694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceadc561123131%3A0x49dcedb84f4340fb!2sCardoso%20Materiais%20para%20Constru%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1664892376157!5m2!1spt-BR!2sbr" width="600" height="522" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</article>
 		</section>

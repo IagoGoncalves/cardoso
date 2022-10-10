@@ -141,19 +141,18 @@ function custom_metabox() {
       'attributes'  => array( // Optional (html input elements)
         'type' => 'tel'
       )
-    ),  
-    array(
-      'id'          => 'telefone3', // Obrigatório
-      'label'       => __( 'Telefone 3:', 'odin' ), // Obrigatório
-      'type'        => 'text', // Obrigatório
-      'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
-      'description' => __( 'Digite o numero ex.: (xx) xxxx-xxxx', 'odin' ),
-      'attributes'  => array( // Optional (html input elements)
-        'type' => 'tel'
-      )
-    ),  
+    ),   
      array(
       'id'          => 'email1', // Obrigatório
+      'label'       => __( 'Email:', 'odin' ), // Obrigatório
+      'type'        => 'text', // Obrigatório
+      'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)
+      'attributes'  => array( // Optional (html input elements)
+        'type' => 'email'
+      )
+    ),   
+    array(
+      'id'          => 'email2', // Obrigatório
       'label'       => __( 'Email:', 'odin' ), // Obrigatório
       'type'        => 'text', // Obrigatório
       'default'     => '', // Opcional (deve ser o id de uma imagem em mídias, separe os ids com virtula)

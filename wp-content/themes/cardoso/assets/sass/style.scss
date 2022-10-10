@@ -694,6 +694,108 @@ p{
                 font-size: 16px;
         }
 }
+//Efeito Subir
+.E-subir{
+        opacity: 0;
+        transform: translate3d(0,100px,0);
+        transition: all 1.5s;
+        @media screen and (max-width: 768px) and (min-width: 425px) {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+        }
+        @media screen and (max-width: 425px) and (min-width: 10px) {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+        }
+}
+.E-subir-start{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+        transition: all 1.5s;
+}
+//-------------
+
+//Efeito Descer
+.E-descer{
+        opacity: 0;
+        transform: translate3d(0,-100px,0);
+        transition: all 1.5s;
+@media screen and (max-width: 768px) and (min-width: 425px) {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+}
+@media screen and (max-width: 425px) and (min-width: 10px) {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+}
+}
+.E-descer-start{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+        transition: all 1.5s;
+}
+//-------------
+
+//Efeito direita
+.E-direita{
+        opacity: 0;
+        transform: translate3d(-100px,0,0);
+        transition: all 1.5s;
+        @media screen and (max-width: 768px) and (min-width: 425px) {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+        }
+        @media screen and (max-width: 425px) and (min-width: 10px) {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+        }
+}
+.E-direita-start{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+        transition: all 1.5s;
+}
+//-------------
+
+//Efeito esquerda
+.E-esquerda{
+        opacity: 0;
+        transform: translate3d(100px,0,0);
+        transition: all 1.5s;
+        @media screen and (max-width: 768px) and (min-width: 425px) {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+        }
+        @media screen and (max-width: 425px) and (min-width: 10px) {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+        }
+}
+.E-esquerda-start{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+        transition: all 1.5s;
+}
+//-------------
+
+//Efeito Fadein
+.E-fadein{
+        opacity: 0;
+        transform: translate3d(0,0,0);
+        transition: all 1.5s;
+        @media screen and (max-width: 768px) and (min-width: 425px) {
+                opacity: 1;
+        }
+        @media screen and (max-width: 425px) and (min-width: 10px) {
+                opacity: 1;
+        }
+}
+.E-fadein-start{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+        transition: all 1.5s;
+}
+//-------------
 .home{
         .banner{
                 height: 85vh;
@@ -780,6 +882,9 @@ p{
                                                 }
                                         }
                                         
+                                }
+                                .swiper-slide-active{
+                                        opacity: 1 !important;
                                 }
                         }
                         .navegation{
@@ -1609,10 +1714,6 @@ p{
                                         width: 100%;
                                         height: 20px;
                                         margin-top: 0;
-                                        &:hover{
-                                                transition: all .3s;
-                                                color: $laranja;
-                                        }
                                 }
                         }
                 }
@@ -1751,6 +1852,9 @@ p{
                                 margin: 60px 0 30px 0;
                                 .telefone1{
                                         margin-right: 20px;
+                                }
+                                .telefone3 img{
+                                        margin-right: 10px;
                                 }
                         }
                         .loc{
