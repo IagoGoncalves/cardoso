@@ -89,6 +89,7 @@ get_header();
 					</div>
 				</div>
 			</div>
+			<span id="sobre"></span>
 		</section>
 		<section class="sobre">
 			<div class="container">
@@ -150,6 +151,7 @@ get_header();
 			</div>
 		</section>
 		<section class="produtos" id="bloco0">
+			<span id="produtos"></span>
 			<?php
 				$titleProduto1 =  get_post_meta( $post->ID,'title-produto1', true );
 				$textProduto1 =  get_post_meta( $post->ID,'text-produto1', true );
@@ -387,6 +389,7 @@ get_header();
 			</div>
 		</section>
 		<section class="frota">
+			<span id="frota"></span>
 			<div class='desktop'>
 				<div class="swiper-container swiper-frota">
 					<div class="swiper-wrapper">
@@ -436,7 +439,7 @@ get_header();
 		</section>
 		<section class="clientes">
 			<div class="container">
-				<h2>Clientes</h2>
+				<h2> Alguns clientes</h2>
 				<div class="swiper-container clientes-destaque">
                     <div class="swiper-wrapper">
                         <?php 
@@ -459,6 +462,7 @@ get_header();
 			</div>
 		</section>
 		<section class="contato">
+			<span id="contato"></span>
 			<article class="foto">
 				<?php 
 					$galeria = get_post_meta( $post->ID,'img-cnt', true );					

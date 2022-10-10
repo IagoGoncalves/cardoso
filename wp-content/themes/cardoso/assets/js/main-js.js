@@ -125,7 +125,7 @@ jQuery(document).ready(function($) {
         var swiper = new Swiper('.clientes-destaque', {
             slidesPerView: 5,
             spaceBetween: 30,		
-            speed: 2000,
+            speed: 1500,
             loop: true,		
             breakpoints: {
                 1200: {
@@ -146,7 +146,7 @@ jQuery(document).ready(function($) {
                 }
             },
             autoplay: {
-                delay: 3000,
+                delay: 1000,
             },
         });
     /* Ajax functions */

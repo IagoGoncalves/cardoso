@@ -1203,6 +1203,15 @@ p{
                                                         }
                                                 }
                                         }
+                                        &:last-child{
+                                                .inner{
+                                                        .date{
+                                                                &:after{
+                                                                        content: none;
+                                                                }
+                                                        }
+                                                }
+                                        }
                                 }
                                 @media screen and (max-width: 1200px){
                                         article{

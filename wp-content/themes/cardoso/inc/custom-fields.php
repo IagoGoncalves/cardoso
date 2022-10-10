@@ -262,7 +262,7 @@ function custom_metabox() {
       ),
       array(
         'id'          => 'img-produto1', // Obrigatório
-        'label'       => __( 'Imagem serviço 1', 'odin' ), // Obrigatório
+        'label'       => __( 'Imagem produto 1', 'odin' ), // Obrigatório
         'type'        => 'image_plupload', // Obrigatório
       ),
       array(
@@ -282,7 +282,7 @@ function custom_metabox() {
       ),
       array(
         'id'          => 'img-produto2', // Obrigatório
-        'label'       => __( 'Imagem serviço 2', 'odin' ), // Obrigatório
+        'label'       => __( 'Imagem produto 2', 'odin' ), // Obrigatório
         'type'        => 'image_plupload', // Obrigatório
       ),
       array(
@@ -302,7 +302,7 @@ function custom_metabox() {
       ),
       array(
         'id'          => 'img-produto3', // Obrigatório
-        'label'       => __( 'Imagem serviço 3', 'odin' ), // Obrigatório
+        'label'       => __( 'Imagem produto 3', 'odin' ), // Obrigatório
         'type'        => 'image_plupload', // Obrigatório
       ),
       array(
@@ -322,7 +322,7 @@ function custom_metabox() {
       ),
       array(
         'id'          => 'img-produto4', // Obrigatório
-        'label'       => __( 'Imagem serviço 4', 'odin' ), // Obrigatório
+        'label'       => __( 'Imagem produto 4', 'odin' ), // Obrigatório
         'type'        => 'image_plupload', // Obrigatório
       ),
       array(
