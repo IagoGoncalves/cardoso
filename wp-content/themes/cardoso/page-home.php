@@ -163,7 +163,7 @@ get_header();
 				$textProduto4 =  get_post_meta( $post->ID,'text-produto4', true );
 			?>
 			<div class="container E-fadein">
-				<h2>Produtos</h2>
+				<h2>Segmentos</h2>
 				<p class="subtitulo"><?php echo get_post_meta( $post->ID,'text-produto', true );?></p>
 				<article class="card">
 					<a href="javascript:void(0);" class="box" onclick='openTela1()'>

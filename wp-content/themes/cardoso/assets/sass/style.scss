@@ -714,20 +714,19 @@ p{
         transition: all 1.5s;
 }
 //-------------
-
 //Efeito Descer
 .E-descer{
         opacity: 0;
         transform: translate3d(0,-100px,0);
         transition: all 1.5s;
-@media screen and (max-width: 768px) and (min-width: 425px) {
-        opacity: 1;
-        transform: translate3d(0,0,0);
-}
-@media screen and (max-width: 425px) and (min-width: 10px) {
-        opacity: 1;
-        transform: translate3d(0,0,0);
-}
+        @media screen and (max-width: 768px) and (min-width: 425px) {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+        }
+        @media screen and (max-width: 425px) and (min-width: 10px) {
+                opacity: 1;
+                transform: translate3d(0,0,0);
+        }
 }
 .E-descer-start{
         opacity: 1;
@@ -735,7 +734,6 @@ p{
         transition: all 1.5s;
 }
 //-------------
-
 //Efeito direita
 .E-direita{
         opacity: 0;
@@ -756,7 +754,6 @@ p{
         transition: all 1.5s;
 }
 //-------------
-
 //Efeito esquerda
 .E-esquerda{
         opacity: 0;
@@ -777,7 +774,6 @@ p{
         transition: all 1.5s;
 }
 //-------------
-
 //Efeito Fadein
 .E-fadein{
         opacity: 0;
