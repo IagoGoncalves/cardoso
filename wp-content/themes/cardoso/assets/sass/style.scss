@@ -629,10 +629,38 @@ footer{
                 padding-bottom: 70px;
                 .icons{
                         padding: 75px 0;
-                        .insta{
-                                margin-right: 42px;
+                        .title-siga{
+                                color: #fff;
+                                margin-bottom: 20px;
+                                font-weight: 500;
+                        }
+                        .icones{
+                                align-items: baseline;
+                                .instagram{
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        margin-right: 40px;
+                                        p{
+                                                color: #fff;
+                                                font-size: 16px;
+                                                transition: all .3s;
+                                        }
+                                        &:hover{
+                                                p{
+                                                        transition: all .3s;
+                                                        color: $laranja;
+                                                }
+                                        }
+                                }
+                                .facebook{
+                                        svg{
+                                                height: 52px;
+                                        }
+                                }
                         }
                         a{
+                                text-decoration: none;
                                 svg{
                                         path{
                                                 transition: all .3s;
