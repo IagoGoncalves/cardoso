@@ -40,6 +40,7 @@
 						</defs>
 					</svg>
 				</a>
+				<span><br>@cardosomatconstr</span>
 				<a href="<?php echo $facebook ?>" alt="Facebook" title="Facebook" target="_blank">
 					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M27.371 39.5V24.407H32.4258L33.182 18.5397H27.371V14.7957C27.371 13.097 27.8433 11.9378 30.2787 11.9378H33.3857V6.69017C31.8816 6.53058 30.3699 6.45319 28.8573 6.45833C24.3788 6.45833 21.313 9.19267 21.313 14.215V18.5397H16.2473V24.407H21.313V39.5H2.66667C2.09203 39.5 1.54093 39.2717 1.1346 38.8654C0.728273 38.4591 0.5 37.908 0.5 37.3333V2.66667C0.5 2.09203 0.728273 1.54093 1.1346 1.1346C1.54093 0.728273 2.09203 0.5 2.66667 0.5H37.3333C37.908 0.5 38.4591 0.728273 38.8654 1.1346C39.2717 1.54093 39.5 2.09203 39.5 2.66667V37.3333C39.5 37.908 39.2717 38.4591 38.8654 38.8654C38.4591 39.2717 37.908 39.5 37.3333 39.5H27.371Z" fill="white"/>
@@ -50,7 +51,7 @@
 				<li><a href="#home" class="scroll" title="Inicio">Início</a></li>
 				<li><a href="#sobre" class="scroll" title="Sobre a empresa">Sobre a empresa</a></li>
 				<li><a href="#produtos" class="scroll" title="Segmentos">Segmentos</a></li>					
-				<li><a href="#frota" class="scroll" title="Frotas">Frotas</a></li>
+				<li><a href="#frota" class="scroll" title="Frota">Frota</a></li>
 				<li><a href="#contato" class="scroll" title="Contato">Contato</a></li>
 			</ul>
         </article>

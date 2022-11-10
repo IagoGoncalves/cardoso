@@ -66,7 +66,7 @@
 						<li><a href="#home" class="scroll" title="Inicio">Início</a></li>
 						<li><a href="#sobre" class="scroll" title="Sobre a empresa">Sobre a empresa</a></li>
 						<li><a href="#produtos" class="scroll" title="Segmentos">Segmentos</a></li>					
-						<li><a href="#frota" class="scroll" title="Frotas">Frotas</a></li>
+						<li><a href="#frota" class="scroll" title="Frota">Frota</a></li>
 						<li><a href="#contato" class="scroll" title="Contato">Contato</a></li>
 					</ul>
 					<a class="botao-whats align" href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp ?>&text=Olá, vim pelo site." alt="<?php echo $whatsapp ?>" title="<?php echo $whatsapp ?>1" target="_blank">
@@ -85,7 +85,7 @@
 						<li><a href="#home" class="scroll" title="Inicio">Início</a></li>
 						<li><a href="#sobre" class="scroll" title="Sobre a empresa">Sobre a empresa</a></li>
 						<li><a href="#produtos" class="scroll" title="Segmentos">Segmentos</a></li>					
-						<li><a href="#frota" class="scroll" title="Frotas">Frotas</a></li>
+						<li><a href="#frota" class="scroll" title="Frota">Frota</a></li>
 						<li><a href="#contato" class="scroll" title="Contato">Contato</a></li>
 					</ul>
 					<a class="botao-whats align" href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp ?>&text=Olá, vim pelo site." alt="<?php echo $whatsapp ?>" title="<?php echo $whatsapp ?>1" target="_blank">
@@ -112,7 +112,7 @@
 									<li><a href="#home" class="scroll" title="Início">Início</a></li>
 									<li><a href="#sobre" class="scroll" title="Sobre a empresa">Sobre a empresa</a></li>
 									<li><a href="#produtos" class="scroll" title="Segmentos">Segmentos</a></li>					
-									<li><a href="#frota" class="scroll" title="Frotas">Frotas</a></li>
+									<li><a href="#frota" class="scroll" title="Frota">Frota</a></li>
 									<li><a href="#contato" class="scroll" title="Contato">Contato</a></li>
 								</ul>
 							</nav>
@@ -140,7 +140,7 @@
 									<li><a href="#home" class="scroll" title="Início">Início</a></li>
 									<li><a href="#sobre" class="scroll" title="Sobre a empresa">Sobre a empresa</a></li>
 									<li><a href="#produtos" class="scroll" title="Segmentos">Segmentos</a></li>					
-									<li><a href="#frota" class="scroll" title="Frotas">Frotas</a></li>
+									<li><a href="#frota" class="scroll" title="Frota">Frota</a></li>
 									<li><a href="#contato" class="scroll" title="Contato">Contato</a></li>
 								</ul>
 							</nav>

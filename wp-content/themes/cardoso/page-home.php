@@ -22,7 +22,7 @@ get_header();
 								</div>
 							</div>
 							<div class="descricoes">
-								<h2 data-swiper-parallax="2300">Material para construção do piso ao telhado</h2>
+								<h2 data-swiper-parallax="2300">Material para construção da fundação ao acabamento</h2>
 							</div>		
 						</div>	
 					</div>	
