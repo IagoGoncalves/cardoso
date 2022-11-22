@@ -1099,6 +1099,11 @@ p{
                                         margin-top: -135px;
                                 }
                         }
+                        @media screen and (max-width: 1440px){
+                                .box2{
+                                        margin-top: -133px;
+                                }
+                        }
                         @media screen and (max-width: 1200px){
                                 .box1{
                                         margin-top: -125px;
@@ -1117,6 +1122,11 @@ p{
                                         }
                                 }
                         }
+                        @media screen and (max-width: 1024px){
+                                .box1{
+                                        margin-top: -149px;
+                                }
+                        }
                         @media screen and (max-width: 770px){
                                 .box1{
                                         margin-top: -100px;
@@ -1128,7 +1138,7 @@ p{
                                         }
                                 }
                                 .box2{
-                                        padding: 50px;
+                                        padding: 62px 50px;
                                         margin-top: -80px;
                                         .align{
                                                 h2{
@@ -1155,6 +1165,7 @@ p{
                                 }
                                 .box2{
                                         margin-top: -77px;
+                                        padding: 50px 40px;
                                 }
                         }
                 }

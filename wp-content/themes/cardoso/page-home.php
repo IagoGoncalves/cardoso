@@ -82,7 +82,7 @@ get_header();
 							$galeria = get_post_meta( $post->ID,'icone2', true );					
 							$galeria = explode(",", $galeria);
 							foreach ( $galeria as $foto ) { ?>					
-								<img src="<?php echo odin_get_image_url( $foto, 62, 60, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+								<img src="<?php echo odin_get_image_url( $foto, 64, 62, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
 							<?php }
 						?>
 						<h2><?php echo $textIcn2?></h2>
@@ -417,13 +417,13 @@ get_header();
 					</div>
 				</div>
 				<article class="descritivo">
-					<h2>Frotas</h2>
+					<h2>Frota</h2>
 					<p><?php echo get_post_meta( $post->ID,'texto-frota', true );?></p>
 				</article>
 			</div>
 			<div class='mobile'>
 				<article class="descritivo">
-					<h2>Frotas</h2>
+					<h2>Frota</h2>
 					<p><?php echo get_post_meta( $post->ID,'texto-frota', true );?></p>
 				</article>
 				<div class="swiper-container swiper-frota">
