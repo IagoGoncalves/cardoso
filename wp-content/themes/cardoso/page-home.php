@@ -515,7 +515,7 @@ get_header();
 										</a>
 									</div>
 									<a class="loc" href="https://goo.gl/maps/sEy7D7sWYBPUeCo66" target="_blank">
-										<?php echo $logradouro ?> <?php echo $endereco ?>, Nº <?php echo $numero ?>, <br> <?php echo $cidade ?>/<?php echo $estado ?> - CEP: <?php echo $cep ?>                       
+										<?php echo $logradouro ?> <?php echo $endereco ?>, nº <?php echo $numero ?>, <br> <?php echo $cidade ?>/<?php echo $estado ?> - CEP: <?php echo $cep ?>                       
                                 	</a> 
 									<a class="email" href="mailto:<?php echo $email ?>" target="_blank">
 										<?php echo $email ?>
