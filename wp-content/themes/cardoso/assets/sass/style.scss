@@ -1064,7 +1064,6 @@ p{
         .flag{
                 @extend .col-md-12;
                 padding: 0px;
-                margin-top: 64px;
                 .container{
                         h2{
                                 margin: 30px 0 0 0;
@@ -1075,8 +1074,9 @@ p{
                         .box1{
                                 background: linear-gradient(90deg, #13334C 3.39%, #005792 100%);
                                 padding: 100px;
-                                margin-top: -105px;
-                                margin-left: 120px;
+                                margin-top: -40px;
+                                width: 600px;
+                                height: 500px;
                                 transform: skewY(5deg);
                                 .card{
                                         flex-direction: column;
@@ -1086,86 +1086,30 @@ p{
                         .box2{
                                 background: linear-gradient(285.57deg, #005792 3.11%, #13334C 100%);
                                 padding: 100px;
-                                margin-top: -100px;
-                                margin-right: 120px;
+                                margin-top: -40px;
+                                width: 600px;
+                                height: 500px;
                                 transform: skewY(-5deg);
                                 .card{
                                         flex-direction: column;
                                         transform: skewY(5deg);
                                 }
                         }
-                        @media screen and (max-width: 1500px){
-                                .box1{
-                                        margin-top: -135px;
-                                }
-                        }
-                        @media screen and (max-width: 1440px){
-                                .box2{
-                                        margin-top: -133px;
-                                }
-                        }
-                        @media screen and (max-width: 1200px){
-                                .box1{
-                                        margin-top: -125px;
-                                        .card{
-                                                h2{
-                                                        font-size: 24px;
-                                                }
-                                        }
-                                }
-                                .box2{
-                                        margin-top: -97px;
-                                        .card{
-                                                h2{
-                                                        font-size: 24px;
-                                                }
-                                        }
-                                }
-                        }
-                        @media screen and (max-width: 1024px){
-                                .box1{
-                                        margin-top: -149px;
-                                }
-                        }
-                        @media screen and (max-width: 770px){
-                                .box1{
-                                        margin-top: -100px;
-                                        padding: 50px;
-                                        .align{
-                                                h2{
-                                                        font-size: 20px;
-                                                }
-                                        }
-                                }
-                                .box2{
-                                        padding: 62px 50px;
-                                        margin-top: -80px;
-                                        .align{
-                                                h2{
-                                                        font-size: 20px;
-                                                }
-                                        }
-                                }
-                        }
-                        @media screen and (max-width: 600px){
+                        @media screen and (max-width: 990px){
+                                flex-direction: column;
                                 .box1, .box2{
-                                        padding: 40px;
-                                        .card{
-                                                img{
-                                                        display: none;
-                                                }
+                                        transform: skewY(0deg);
+                                        margin: 0;
+                                        width: 100%;
+                                        padding: 35px;
+                                        height: auto;
+                                        .align{
+                                                transform: skewY(0deg);
                                                 h2{
-                                                        margin: 0;
-                                                        font-size: 16px;
+                                                        margin: 10px 0 0 0;
+                                                        width: 100%
                                                 }
                                         }
-                                }
-                                .box1{
-                                        margin-top: -91px;
-                                }
-                                .box2{
-                                        margin-top: -77px;
-                                        padding: 50px 40px;
                                 }
                         }
                 }
