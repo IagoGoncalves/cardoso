@@ -373,7 +373,10 @@ header{
                                                                         background: #363636 0% 0% no-repeat padding-box;
                                                                 } 
                                                         }
-                                                }                        
+                                                }     
+                                                .li-whats{
+                                                        background-color: $laranja;
+                                                }                   
                                         }
                                 }
                         }                
@@ -559,7 +562,9 @@ header{
                                                                 } 
                                                         }
                                                 }
-                                        
+                                                .li-whats{
+                                                        background-color: $laranja;
+                                                }
                                         }
                                 }
                         }                
@@ -876,7 +881,7 @@ p{
                                                                         font-size: 32px;
                                                                 }
                                                         }                        
-                                                }      
+                                                }   
                                         }
                                         .banner1{
                                                 .descricoes{
@@ -905,6 +910,7 @@ p{
                                                         }
                                                 }
                                         }
+                                        
                                         
                                 }
                                 .swiper-slide-active{
@@ -1052,6 +1058,24 @@ p{
                 }
                 @media screen and (max-width: 457px){
                         .swiper-container{
+                                .swiper-wrapper{
+                                        .swiper-slide{
+                                                .padrao-banner{
+                                                        .foto-banner{
+                                                                .foto{
+                                                                        img{
+                                                                                max-width: 120%;
+                                                                        }
+                                                                }
+                                                        }
+                                                        .descricoes{
+                                                                h2{
+                                                                        font-size: 16px;
+                                                                }
+                                                        }
+                                                }
+                                        }
+                                }
                                 .navegation{
                                         .swiper-pagination{
                                                 right: 0;
@@ -1070,6 +1094,7 @@ p{
                                 color: #fff;
                                 font-weight: 700;
                                 text-align: center;
+                                width: 100%;
                         }
                         .box1{
                                 background: linear-gradient(90deg, #13334C 3.39%, #005792 100%);
@@ -1108,6 +1133,19 @@ p{
                                                 h2{
                                                         margin: 10px 0 0 0;
                                                         width: 100%
+                                                }
+                                        }
+                                }
+                        }
+                }
+                @media screen and (max-width: 690px){
+                        margin-top: 20px;
+                        .container{
+                                .box1, .box2{
+                                        padding: 22px;
+                                        .align{
+                                                h2{
+                                                        font-size: 16px;
                                                 }
                                         }
                                 }
@@ -1554,12 +1592,13 @@ p{
                                         margin: 20px 0;
                                 }
                                 .swiper-container{
-                                        width: 53%;
+                                        width: 100%;
                                         .swiper-wrapper{
                                                 .swiper-slide{
                                                         width: 100%;
                                                         img{
-                                                                max-width: 50%;
+                                                                max-width: 100%;
+                                                                width: 100%;
                                                         }
                                                 }
                                         }
@@ -1606,6 +1645,9 @@ p{
                                                 }
                                         }
                                 }
+                                .box1{
+                                        margin-bottom: 20px;
+                                }
                                 .mobile{
                                         display: none;
                                 }
@@ -1622,15 +1664,6 @@ p{
                                                         }
                                                         img{
                                                                 max-width: 40%;
-                                                        }
-                                                }
-                                                .swiper-container{
-                                                        height: 540px;
-                                                        .swiper-slide{
-                                                                img{
-                                                                        width: auto !important;
-                                                                        max-width: fit-content !important;
-                                                                }
                                                         }
                                                 }
                                         }

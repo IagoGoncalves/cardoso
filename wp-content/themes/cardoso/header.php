@@ -114,6 +114,7 @@
 									<li><a href="#produtos" class="scroll" title="Segmentos">Segmentos</a></li>					
 									<li><a href="#frota" class="scroll" title="Frota">Frota</a></li>
 									<li><a href="#contato" class="scroll" title="Contato">Contato</a></li>
+									<li class="li-whats"><a class="botao-whats whats-mobile" href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp ?>&text=Olá, vim pelo site." alt="<?php echo $whatsapp ?>" title="<?php echo $whatsapp ?>1" target="_blank">Whatsapp</a></li>
 								</ul>
 							</nav>
 						</div>							
@@ -142,6 +143,7 @@
 									<li><a href="#produtos" class="scroll" title="Segmentos">Segmentos</a></li>					
 									<li><a href="#frota" class="scroll" title="Frota">Frota</a></li>
 									<li><a href="#contato" class="scroll" title="Contato">Contato</a></li>
+									<li class="li-whats"><a class="botao-whats whats-mobile" href="https://api.whatsapp.com/send?phone=55<?php echo $whatsapp ?>&text=Olá, vim pelo site." alt="<?php echo $whatsapp ?>" title="<?php echo $whatsapp ?>1" target="_blank">Whatsapp</a></li>
 								</ul>
 							</nav>
 						</div>							

@@ -304,7 +304,7 @@ get_header();
 						$galeria = get_post_meta( $post->ID,'icn-produto4', true );					
 						$galeria = explode(",", $galeria);
 						foreach ( $galeria as $foto ) { ?>					
-							<img src="<?php echo odin_get_image_url( $foto, 120, 120, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+							<img src="<?php echo odin_get_image_url( $foto, 120, 120, false, false);?>" alt="<?php echo get_the_title($foto); ?>">
 						<?php }
 					?>
 					<h4><?php echo $titleProduto4?></h4>
@@ -317,7 +317,7 @@ get_header();
 							$galeria = explode(",", $galeria);
 							foreach ( $galeria as $foto ) { ?>		
 								<div class="swiper-slide">
-									<img src="<?php echo odin_get_image_url( $foto, 600, 685, true,true);?>" alt="<?php echo get_the_title($foto); ?>">
+									<img src="<?php echo odin_get_image_url( $foto, 600, 685, false, false);?>" alt="<?php echo get_the_title($foto); ?>">
 								</div>
 							<?php }
 						?>		
